@@ -8,7 +8,7 @@ Python 3.12, bibliothèque standard, `PyYAML`, `pytest`. Mêmes conventions que 
 
 ## Vérifications
 
-- Tests : `python -m pytest -q` (ou, sans pytest installé : `python -m unittest tests.test_engine`). Aucun appel réseau.
+- Tests : `python -m pytest -q` (ou, sans pytest installé : `python -m unittest tests.test_engine tests.test_itineraire`). Aucun appel réseau.
 - Essai sans réseau : `python -m tracker --dry-run`. Essai réel (~3 min, ~35 requêtes Xotelo) : `python -m tracker`.
 
 ## Règles
@@ -23,7 +23,8 @@ Python 3.12, bibliothèque standard, `PyYAML`, `pytest`. Mêmes conventions que 
 
 ```text
 config.yaml        voyage, contraintes, source, villes (aucun secret)
-tracker/           __main__ (orchestration), config, models, filters
+tracker/           __main__ (orchestration), config, models, filters, itineraire (ordre, nuits, total)
+data/              trajets.yaml (durée, prix en ¥, valeurs approximatives)
 tracker/sources/   une source = list_hotels + rates (xotelo, sample pour le dry-run)
 tests/             unittest/pytest, sources injectées
 ```

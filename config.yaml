@@ -2,11 +2,11 @@
 voyage:                       # copié UNE fois de flight-price-tracker, à tenir synchro à la main
   arrivee: 2027-05-06         # le vol part le 05/05, arrivée au Japon le 06/05 (à confirmer)
   depart: 2027-05-22
-  aeroport_arrivee: KIX       # utilisé en Phase 2
-  aeroport_depart: HND        # utilisé en Phase 2
+  aeroport_arrivee: KIX       # la ville dont `aeroport` correspond passe en premier
+  aeroport_depart: HND        # ... et celle-ci en dernier
 voyageurs: 2
 devise: EUR
-taux_jpy_eur: 0.0061          # utilisé en Phase 2
+taux_jpy_eur: 0.0061          # ¥ → € pour les trajets
 
 contraintes:
   note_min: 8.0               # sur 10, converti en /5 pour Xotelo
@@ -20,14 +20,17 @@ source:
   pause_seconds: [1, 3]
   candidats_max: 10           # hôtels dont on demande les tarifs, par ville
 
-villes:                       # l'ordre ici est provisoire : Phase 2 fixe l'ordre selon les aéroports
+villes:                       # l'ordre est fixé selon les aéroports ; les nuits au-delà de `nuits_min` sont réparties (poids = 1 + nombre d'activités)
   osaka:
     xotelo_location_key: g298566
     nuits_min: 3
-    quartiers: [Namba, Nishikujo]   # utilisé en Phase 2
+    aeroport: KIX
+    activites:
+      - {nom: Universal Studios Japan, reservation_requise: true, delai_reservation: 30}
   kyoto:
     xotelo_location_key: g298564
     nuits_min: 3
   tokyo:
     xotelo_location_key: g298184
     nuits_min: 4
+    aeroport: HND
