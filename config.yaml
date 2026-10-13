@@ -36,6 +36,6 @@ villes:                       # l'ordre est fixé selon les aéroports ; les nui
     aeroport: HND
 
 alertes:                      # évaluées à chaque relevé réel, comparées au relevé précédent (historique/prix.csv)
-  total_sous: null            # € : alerte si l'hébergement recommandé (complet) passe sous ce montant
+  total_sous: 600             # € : alerte si l'hébergement recommandé (complet) passe sous ce montant
   baisse_pct: 5               # alerte si un hôtel suivi baisse d'au moins ce pourcentage
   hotel_disparu: true         # alerte si un hôtel suivi n'a plus de tarif
