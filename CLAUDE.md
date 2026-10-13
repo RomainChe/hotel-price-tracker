@@ -17,7 +17,7 @@ Python 3.12, bibliothèque standard, `PyYAML`, `pytest`. Mêmes conventions que 
 - Aucun hôtel hors critères. Si une ville n'a aucun résultat : le dire et proposer d'assouplir un critère, jamais en silence.
 - Ne jamais contourner un blocage ou des conditions d'utilisation d'une source.
 - Trajets et quartiers : fichiers statiques versionnés (`data/`), pas de LLM.
-- Phase 4 (intégration JARVIS) seulement après feu vert explicite.
+- `historique/resume.json` est lu par JARVIS (`hotel_snapshot`, dépôt ProjectJarvis) : en changer le schéma, c'est changer JARVIS aussi.
 
 ## Dossiers
 

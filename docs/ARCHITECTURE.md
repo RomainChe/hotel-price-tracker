@@ -76,3 +76,8 @@ Données statiques versionnées : `data/trajets.yaml` (Shinkansen/JR : durée, p
 - Push : `out/alertes.md` non vide → `gh issue create` dans le workflow (jeton `GITHUB_TOKEN`, aucun secret ; GitHub notifie par e-mail).
 
 Mode `dry-run` : données de test, aucun appel réseau, aucune écriture d'historique ni alerte.
+
+## Intégration JARVIS (Phase 4)
+
+- `tracker/itineraire.resume` calcule les mêmes totaux que `build` (règle « recommandé », trajets) et `python -m tracker` l'écrit dans `historique/resume.json` à chaque relevé réel (pas en dry-run). Le workflow le commite avec le reste de `historique/`.
+- JARVIS (dépôt `ProjectJarvis`, `jarvis/core/voyages.py`) lit ce fichier en lecture seule (`git show origin/main:…`), borne et assainit les champs, ne lance aucun code du tracker et n'écrit rien ici. Schéma : `date`, `devise`, `voyageurs`, `trajets`, `complet`, `total_recommande`, `total_moins_cher`, `etapes[]` (`ville`, `chk_in`, `chk_out`, `nuits`, `recommande`, `moins_cher` : `hotel`, `note10`, `nuit`, `total`). Changer ce schéma = changer `hotel_snapshot` côté JARVIS.
