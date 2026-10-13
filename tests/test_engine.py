@@ -114,9 +114,9 @@ class RunTest(unittest.TestCase):
         osaka = results[0]
         self.assertEqual([o.hotel.name for o in osaka.offers], ["Hôtel Midori", "Hôtel Sakura"])  # moins cher d'abord
         self.assertEqual(osaka.offers[0].ota, "Agoda")
-        self.assertEqual((osaka.chk_in, osaka.chk_out), ("2027-05-06", "2027-05-09"))
-        self.assertEqual(results[1].chk_in, "2027-05-09")  # séjours consécutifs
-        self.assertEqual(osaka.offers[0].total, 85 * 3)
+        self.assertEqual((osaka.chk_in, osaka.chk_out, osaka.nights), ("2027-05-06", "2027-05-15", 9))
+        self.assertEqual(results[1].chk_in, "2027-05-15")  # séjours consécutifs
+        self.assertEqual(osaka.offers[0].total, 85 * 9)
         self.assertIn("Osaka", render(cfg(), results))
 
     def test_aucun_resultat_est_dit(self):

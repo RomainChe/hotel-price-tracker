@@ -6,10 +6,19 @@ import yaml
 
 
 @dataclass
+class Activite:
+    nom: str
+    reservation_requise: bool = False
+    delai_reservation: int = 0  # jours avant le séjour
+
+
+@dataclass
 class Ville:
     name: str
     location_key: str  # clé Xotelo (ex. g298566)
     nuits_min: int
+    aeroport: str = ""  # sert à fixer l'ordre : la ville de l'aéroport d'arrivée d'abord, celle du départ en dernier
+    activites: tuple[Activite, ...] = ()  # leur nombre pèse dans la répartition des nuits supplémentaires
 
 
 @dataclass
@@ -27,6 +36,9 @@ class Config:
     pause_seconds: tuple[float, float] = (1.0, 3.0)
     candidats_max: int = 10
     source: str = "xotelo"
+    aeroport_arrivee: str = ""
+    aeroport_depart: str = ""
+    taux_jpy_eur: float = 0.0061
 
 
 def _date(value, label) -> date:
@@ -46,7 +58,11 @@ def _ville(name: str, raw: dict | None) -> Ville:
     nuits = int(raw.get("nuits_min", 1))
     if nuits < 1:
         raise ValueError(f"villes.{name} : `nuits_min` doit être au moins 1.")
-    return Ville(name=str(name), location_key=str(key), nuits_min=nuits)
+    activites = tuple(
+        Activite(str(a.get("nom", "?")), bool(a.get("reservation_requise", False)), int(a.get("delai_reservation", 0)))
+        for a in raw.get("activites") or [])
+    return Ville(name=str(name), location_key=str(key), nuits_min=nuits,
+                 aeroport=str(raw.get("aeroport", "")).upper(), activites=activites)
 
 
 def parse_config(raw: dict) -> Config:
@@ -86,6 +102,9 @@ def parse_config(raw: dict) -> Config:
         petit_dejeuner=bool(c.get("petit_dejeuner", False)),
         max_requests=int(s.get("max_requests", 200)), pause_seconds=pause,
         candidats_max=int(s.get("candidats_max", 10)),
+        aeroport_arrivee=str(voyage.get("aeroport_arrivee", "")).upper(),
+        aeroport_depart=str(voyage.get("aeroport_depart", "")).upper(),
+        taux_jpy_eur=float(raw.get("taux_jpy_eur", 0.0061)),
     )
 
 

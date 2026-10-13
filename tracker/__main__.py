@@ -7,6 +7,7 @@ from pathlib import Path
 
 from .config import Config, load_config
 from .filters import explain_empty, filter_hotels, filter_offers
+from .itineraire import build, load_trajets, plan_stays
 from .models import Offer, rooms_for
 from .sources.sample import Sample
 from .sources.xotelo import BudgetExhausted, Xotelo
@@ -20,17 +21,16 @@ class CityResult:
     ville: str
     chk_in: str
     chk_out: str
+    nights: int = 0
     offers: list[Offer] = field(default_factory=list)  # un par hôtel (OTA la moins chère), du moins cher au plus cher
     message: str = ""  # pourquoi il n'y a rien, ou quelle panne
 
 
 def run(cfg: Config, source) -> list[CityResult]:
     rooms, adults = rooms_for(cfg.voyageurs)
-    results, day = [], cfg.arrivee
-    for ville in cfg.villes:
-        # ponytail : séjours provisoires, `nuits_min` à la suite depuis l'arrivée ; la Phase 2 répartit les nuits
-        chk_in, day = day, day + timedelta(days=ville.nuits_min)
-        res = CityResult(ville.name, chk_in.isoformat(), day.isoformat())
+    results = []
+    for ville, chk_in, nights in plan_stays(cfg):
+        res = CityResult(ville.name, chk_in.isoformat(), (chk_in + timedelta(days=nights)).isoformat(), nights)
         results.append(res)
         try:
             hotels, funnel = filter_hotels(source.list_hotels(ville.location_key), cfg)
@@ -45,7 +45,7 @@ def run(cfg: Config, source) -> list[CityResult]:
                     continue
                 if rates:
                     ota, rate = min(rates, key=lambda r: r[1])
-                    offers.append(Offer(h, ota, rate, ville.nuits_min, rooms))
+                    offers.append(Offer(h, ota, rate, nights, rooms))
             offers, f2 = filter_offers(offers, cfg)
             res.offers = sorted(offers, key=lambda o: o.rate)
             if not res.offers:
@@ -73,6 +73,7 @@ def render(cfg: Config, results: list[CityResult]) -> str:
 def main():
     parser = argparse.ArgumentParser(description="Itinéraire d'hébergement : hôtels et prix par ville.")
     parser.add_argument("--config", default=ROOT / "config.yaml", type=Path)
+    parser.add_argument("--out", default=ROOT / "out" / "itineraire.md", type=Path)
     parser.add_argument("--dry-run", action="store_true", help="données de test, aucun appel réseau")
     args = parser.parse_args()
     sys.stdout.reconfigure(encoding="utf-8")  # consoles Windows cp1252
@@ -81,7 +82,11 @@ def main():
     except ValueError as e:  # erreur de configuration : message clair, sans trace
         sys.exit(f"Configuration invalide : {e}")
     source = Sample() if args.dry_run else Xotelo(cfg.max_requests, cfg.pause_seconds)
-    print(render(cfg, run(cfg, source)))
+    results = run(cfg, source)
+    itineraire = build(cfg, results, load_trajets(ROOT / "data" / "trajets.yaml"))
+    args.out.parent.mkdir(parents=True, exist_ok=True)
+    args.out.write_text(itineraire, encoding="utf-8")
+    print(render(cfg, results) + "\n\n" + itineraire)
 
 
 if __name__ == "__main__":
