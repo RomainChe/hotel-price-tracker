@@ -1,0 +1,33 @@
+# Aucun secret ici (dépôt public). Xotelo ne demande aucune clé.
+voyage:                       # copié UNE fois de flight-price-tracker, à tenir synchro à la main
+  arrivee: 2027-05-06         # le vol part le 05/05, arrivée au Japon le 06/05 (à confirmer)
+  depart: 2027-05-22
+  aeroport_arrivee: KIX       # utilisé en Phase 2
+  aeroport_depart: HND        # utilisé en Phase 2
+voyageurs: 2
+devise: EUR
+taux_jpy_eur: 0.0061          # utilisé en Phase 2
+
+contraintes:
+  note_min: 8.0               # sur 10, converti en /5 pour Xotelo
+  avis_min: 100
+  budget_max_nuit: null       # € par chambre et par nuit, optionnel
+  petit_dejeuner: false       # true : seulement les hôtels annoncés « Breakfast included »
+
+source:
+  nom: xotelo
+  max_requests: 200           # par exécution
+  pause_seconds: [1, 3]
+  candidats_max: 10           # hôtels dont on demande les tarifs, par ville
+
+villes:                       # l'ordre ici est provisoire : Phase 2 fixe l'ordre selon les aéroports
+  osaka:
+    xotelo_location_key: g298566
+    nuits_min: 3
+    quartiers: [Namba, Nishikujo]   # utilisé en Phase 2
+  kyoto:
+    xotelo_location_key: g298564
+    nuits_min: 3
+  tokyo:
+    xotelo_location_key: g298184
+    nuits_min: 4
