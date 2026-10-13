@@ -92,3 +92,18 @@ def build(cfg, results, trajets: dict) -> str:
     if notes:
         out += ["", "## Notes", *(f"- {n}" for n in notes)]
     return "\n".join(out) + "\n"
+
+
+def resume(cfg, results, trajets: dict, today: date) -> dict:
+    """Totaux du relevé en JSON (`historique/resume.json`), lus par JARVIS : mêmes règles que `build`, aucune donnée personnelle."""
+    pick = lambda o: o and {"hotel": o.hotel.name, "note10": o.hotel.rating * 2, "nuit": o.rate, "total": o.total}  # noqa: E731
+    etapes = [{"ville": r.ville, "chk_in": r.chk_in, "chk_out": r.chk_out, "nuits": r.nights,
+               "recommande": pick(recommended(r.offers) if r.offers else None),
+               "moins_cher": pick(r.offers[0] if r.offers else None)} for r in results]
+    legs = [trajets.get("-".join(sorted((a.ville, b.ville)))) for a, b in zip(results, results[1:])]
+    trajets_eur = sum(t["prix_jpy"] * cfg.voyageurs * cfg.taux_jpy_eur for t in legs if t)
+    done = [r for r in results if r.offers]
+    return {"date": today.isoformat(), "devise": cfg.devise, "voyageurs": cfg.voyageurs, "etapes": etapes,
+            "trajets": round(trajets_eur, 2), "complet": len(done) == len(results) and all(legs),
+            "total_recommande": round(sum(recommended(r.offers).total for r in done) + trajets_eur, 2),
+            "total_moins_cher": round(sum(r.offers[0].total for r in done) + trajets_eur, 2)}

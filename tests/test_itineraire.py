@@ -4,7 +4,7 @@ from datetime import date
 
 from tracker.__main__ import run
 from tracker.config import parse_config
-from tracker.itineraire import build, plan_stays, recommended
+from tracker.itineraire import build, plan_stays, recommended, resume
 from tracker.models import Hotel, Offer
 from tracker.sources.sample import Sample
 
@@ -74,6 +74,25 @@ class BuildTest(unittest.TestCase):
         md = build(c2, run(c2, Sample()), TRAJETS)
         self.assertIn("INCOMPLET", md)
         self.assertIn("budget_max_nuit", md)
+
+
+class ResumeTest(unittest.TestCase):
+    def test_totaux_identiques_a_l_itineraire(self):
+        c = cfg()
+        results = run(c, Sample())
+        r = resume(c, results, TRAJETS, date(2026, 10, 13))
+        self.assertEqual((r["date"], r["voyageurs"], r["devise"], r["trajets"], r["complet"]), ("2026-10-13", 2, "EUR", 220, True))
+        self.assertEqual([e["ville"] for e in r["etapes"]], ["osaka", "kyoto", "tokyo"])
+        self.assertEqual(r["total_recommande"], sum(recommended(x.offers).total for x in results) + 220)
+        self.assertEqual(r["total_moins_cher"], sum(x.offers[0].total for x in results) + 220)
+
+    def test_incomplet_sans_trajet_ni_offre(self):
+        c = cfg()
+        c.budget_max_nuit = 10
+        r = resume(c, run(c, Sample()), TRAJETS, date(2026, 10, 13))
+        self.assertFalse(r["complet"])
+        self.assertTrue(all(e["recommande"] is None and e["moins_cher"] is None for e in r["etapes"]))
+        self.assertFalse(resume(cfg(), run(cfg(), Sample()), {}, date(2026, 10, 13))["complet"])
 
 
 if __name__ == "__main__":

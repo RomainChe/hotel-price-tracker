@@ -1,5 +1,6 @@
 """Point d'entrée : python -m tracker [--dry-run] [--config config.yaml]"""
 import argparse
+import json
 import sys
 from dataclasses import dataclass, field
 from datetime import date, timedelta
@@ -7,7 +8,7 @@ from pathlib import Path
 
 from .config import Config, load_config
 from .filters import explain_empty, filter_hotels, filter_offers
-from .itineraire import build, load_trajets, plan_stays
+from .itineraire import build, load_trajets, plan_stays, resume
 from .models import Offer, rooms_for
 from .sources.sample import Sample
 from .sources.xotelo import BudgetExhausted, Xotelo
@@ -84,7 +85,8 @@ def main():
         sys.exit(f"Configuration invalide : {e}")
     source = Sample() if args.dry_run else Xotelo(cfg.max_requests, cfg.pause_seconds)
     results = run(cfg, source)
-    itineraire = build(cfg, results, load_trajets(ROOT / "data" / "trajets.yaml"))
+    trajets = load_trajets(ROOT / "data" / "trajets.yaml")
+    itineraire = build(cfg, results, trajets)
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(itineraire, encoding="utf-8")
     print(render(cfg, results) + "\n\n" + itineraire)
@@ -95,6 +97,8 @@ def main():
     found = alerts(cfg, results, history, date.today())
     history = write_history(hist_dir / "prix.csv", history, rows_for(results, date.today()))
     (hist_dir / "suivi.md").write_text(dashboard(cfg, history), encoding="utf-8")
+    resume_json = json.dumps(resume(cfg, results, trajets, date.today()), ensure_ascii=False, indent=1)
+    (hist_dir / "resume.json").write_text(resume_json + "\n", encoding="utf-8")  # lu par JARVIS (outil hotel_itineraire)
     (args.out.parent / "alertes.md").write_text("\n".join(found) + "\n" if found else "", encoding="utf-8")
     print("\nAlertes :\n" + ("\n".join(found) if found else "aucune"))
 
