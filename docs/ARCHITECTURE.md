@@ -69,4 +69,10 @@ Données statiques versionnées : `data/trajets.yaml` (Shinkansen/JR : durée, p
 4. Trajets et total (hébergement + trajets inter-villes, N voyageurs, € et ¥, date de mise à jour).
 5. `itineraire.md`, ajout à l'historique CSV, alertes. Aucun résultat dans une ville : message clair et critère à assouplir proposé.
 
-Mode `dry-run` : données de test, aucun appel réseau, aucune écriture d'historique.
+## Suivi (Phase 3)
+
+- `tracker/suivi.py` : `historique/prix.csv` (une ligne par offre et par relevé ; relancer le même jour remplace les lignes du jour), alertes, `historique/suivi.md`.
+- Alertes : comparées au relevé précédent du même séjour (mêmes dates). Hôtels suivis = le recommandé et le moins cher de ce relevé ; une ville sans offre n'émet aucune alerte (panne ou critères, pas une disparition). `total_sous` : hébergement recommandé seul, uniquement si toutes les villes ont une offre.
+- Push : `out/alertes.md` non vide → `gh issue create` dans le workflow (jeton `GITHUB_TOKEN`, aucun secret ; GitHub notifie par e-mail).
+
+Mode `dry-run` : données de test, aucun appel réseau, aucune écriture d'historique ni alerte.

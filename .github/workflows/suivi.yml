@@ -1,0 +1,53 @@
+name: Suivi quotidien
+
+on:
+  schedule:
+    - cron: "23 5 * * *"  # 5 h 23 UTC, hors heure pile ; GitHub peut retarder de 10 à 30 min
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Données de test : aucun appel réseau, ni historique ni alerte"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: suivi
+  cancel-in-progress: false
+
+jobs:
+  suivi:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: python -m pytest -q
+      - name: Relevé, historique et alertes
+        run: python -m tracker ${{ inputs.dry_run && '--dry-run' || '' }}
+      - name: Résumé
+        if: always()
+        run: cat out/itineraire.md >> "$GITHUB_STEP_SUMMARY" 2>/dev/null || true
+      - name: Alerte (issue GitHub, notification par e-mail)
+        if: ${{ !inputs.dry_run }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          [ -s out/alertes.md ] || { echo "Aucune alerte."; exit 0; }
+          gh issue create --title "Alerte hôtels $(date -u +%F)" --body-file out/alertes.md
+      - name: Commit de l'historique
+        if: ${{ !inputs.dry_run }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add historique/
+          git diff --cached --quiet || git commit -m "Relevé des prix du $(date -u +%F)"
+          git pull --rebase
+          git push
