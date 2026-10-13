@@ -1,0 +1,27 @@
+date,ville,chk_in,chk_out,hotel_key,hotel,rating,reviews,ota,rate,nights,rooms
+2026-10-13,osaka,2027-05-06,2027-05-13,g298566-d302313,Hotel Nikko Osaka,4.1,2685,Agoda.com,50.0,7,1
+2026-10-13,osaka,2027-05-06,2027-05-13,g298566-d13778849,ART HOTEL Osaka Bay Tower,4.0,147,Booking.com,51.0,7,1
+2026-10-13,osaka,2027-05-06,2027-05-13,g298566-d17338162,Hiyori Hotel Osaka Namba,4.4,115,Vio.com,79.0,7,1
+2026-10-13,osaka,2027-05-06,2027-05-13,g298566-d7806340,The Park Front Hotel at Universal Studios Japan,4.3,1016,Booking.com,89.0,7,1
+2026-10-13,osaka,2027-05-06,2027-05-13,g298566-d634620,Hotel Universal Port,4.5,2333,Agoda.com,94.0,7,1
+2026-10-13,osaka,2027-05-06,2027-05-13,g298566-d17577303,The Lively Osaka Honmachi,4.5,471,Agoda.com,100.0,7,1
+2026-10-13,osaka,2027-05-06,2027-05-13,g298566-d678584,Cross Hotel Osaka,4.4,2022,Trip.com,134.0,7,1
+2026-10-13,osaka,2027-05-06,2027-05-13,g298566-d301569,Swissotel Nankai Osaka,4.4,4827,Agoda.com,167.0,7,1
+2026-10-13,osaka,2027-05-06,2027-05-13,g298566-d23985407,Centara Grand Hotel Osaka,4.7,1167,Trip.com,184.0,7,1
+2026-10-13,kyoto,2027-05-13,2027-05-17,g298564-d307683,Rihga Royal Hotel Kyoto,4.0,2201,Agoda.com,75.0,4,1
+2026-10-13,kyoto,2027-05-13,2027-05-17,g298564-d21291794,Hotel Tou Nishinotoin Kyoto,4.7,724,Agoda.com,112.0,4,1
+2026-10-13,kyoto,2027-05-13,2027-05-17,g298564-d12225052,Solaria Nishitetsu Hotel Kyoto Premier Sanjo Kamogawa,4.6,562,Vio.com,151.0,4,1
+2026-10-13,kyoto,2027-05-13,2027-05-17,g298564-d23974593,Nohga Hotel Kiyomizu Kyoto,4.8,189,Trip.com,189.0,4,1
+2026-10-13,kyoto,2027-05-13,2027-05-17,g298564-d20264752,Ace Hotel Kyoto,4.8,421,Agoda.com,200.0,4,1
+2026-10-13,kyoto,2027-05-13,2027-05-17,g298564-d1071189,Hotel Granvia Kyoto,4.4,3840,Vio.com,203.0,4,1
+2026-10-13,kyoto,2027-05-13,2027-05-17,g298564-d16714910,Hotel Vischio Kyoto by Granvia,4.4,246,Agoda.com,207.0,4,1
+2026-10-13,kyoto,2027-05-13,2027-05-17,g298564-d15194272,Cross Hotel Kyoto,4.7,734,Agoda.com,209.0,4,1
+2026-10-13,kyoto,2027-05-13,2027-05-17,g298564-d12257620,Hotel The Celestine Kyoto Gion,4.4,426,Trip.com,266.0,4,1
+2026-10-13,tokyo,2027-05-17,2027-05-22,g298184-d20063612,Hotel Villa Fontaine Grand Haneda Airport,4.0,275,Trip.com,92.0,5,1
+2026-10-13,tokyo,2027-05-17,2027-05-22,g298184-d307395,Tokyo Dome Hotel,4.1,1570,Agoda.com,115.0,5,1
+2026-10-13,tokyo,2027-05-17,2027-05-22,g298184-d658576,Sotetsu Fresa Inn Higashi Shinjuku,4.0,1354,Trip.com,117.0,5,1
+2026-10-13,tokyo,2027-05-17,2027-05-22,g298184-d6987624,Hotel Gracery Shinjuku,4.1,2558,Agoda.com,146.0,5,1
+2026-10-13,tokyo,2027-05-17,2027-05-22,g298184-d304546,Hotel Metropolitan Tokyo Ikebukuro,4.1,1969,Agoda.com,169.0,5,1
+2026-10-13,tokyo,2027-05-17,2027-05-22,g298184-d1082914,Mitsui Garden Hotel Ginza Premier,4.4,1763,Agoda.com,252.0,5,1
+2026-10-13,tokyo,2027-05-17,2027-05-22,g298184-d307381,Shibuya Excel Hotel Tokyu,4.2,1660,Agoda.com,253.0,5,1
+2026-10-13,tokyo,2027-05-17,2027-05-22,g298184-d304305,Keio Plaza Hotel Tokyo,4.1,5604,Trip.com,258.0,5,1
