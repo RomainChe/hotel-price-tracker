@@ -2,7 +2,7 @@
 import argparse
 import sys
 from dataclasses import dataclass, field
-from datetime import timedelta
+from datetime import date, timedelta
 from pathlib import Path
 
 from .config import Config, load_config
@@ -11,6 +11,7 @@ from .itineraire import build, load_trajets, plan_stays
 from .models import Offer, rooms_for
 from .sources.sample import Sample
 from .sources.xotelo import BudgetExhausted, Xotelo
+from .suivi import alerts, dashboard, load_history, rows_for, write_history
 
 ROOT = Path(__file__).resolve().parents[1]
 SHOWN = 3  # offres affichées par ville
@@ -87,6 +88,15 @@ def main():
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(itineraire, encoding="utf-8")
     print(render(cfg, results) + "\n\n" + itineraire)
+    if args.dry_run:  # données de test : ni historique ni alertes
+        return
+    hist_dir = ROOT / "historique"
+    history = load_history(hist_dir / "prix.csv")
+    found = alerts(cfg, results, history, date.today())
+    history = write_history(hist_dir / "prix.csv", history, rows_for(results, date.today()))
+    (hist_dir / "suivi.md").write_text(dashboard(cfg, history), encoding="utf-8")
+    (args.out.parent / "alertes.md").write_text("\n".join(found) + "\n" if found else "", encoding="utf-8")
+    print("\nAlertes :\n" + ("\n".join(found) if found else "aucune"))
 
 
 if __name__ == "__main__":

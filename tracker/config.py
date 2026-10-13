@@ -39,6 +39,9 @@ class Config:
     aeroport_arrivee: str = ""
     aeroport_depart: str = ""
     taux_jpy_eur: float = 0.0061
+    alerte_total_sous: float | None = None  # hébergement recommandé, pour tous les voyageurs
+    alerte_baisse_pct: float = 5.0
+    alerte_hotel_disparu: bool = True
 
 
 def _date(value, label) -> date:
@@ -84,6 +87,8 @@ def parse_config(raw: dict) -> Config:
     if not 0 <= note_min <= 10:
         raise ValueError("contraintes.note_min : entre 0 et 10.")
     budget = c.get("budget_max_nuit")
+    a = raw.get("alertes") or {}
+    total_sous = a.get("total_sous")
     s = raw.get("source") or {}
     if s.get("nom", "xotelo") != "xotelo":
         raise ValueError(f"source.nom : « {s['nom']} » inconnue (seule `xotelo` existe).")
@@ -105,6 +110,8 @@ def parse_config(raw: dict) -> Config:
         aeroport_arrivee=str(voyage.get("aeroport_arrivee", "")).upper(),
         aeroport_depart=str(voyage.get("aeroport_depart", "")).upper(),
         taux_jpy_eur=float(raw.get("taux_jpy_eur", 0.0061)),
+        alerte_total_sous=float(total_sous) if total_sous is not None else None,
+        alerte_baisse_pct=float(a.get("baisse_pct", 5)), alerte_hotel_disparu=bool(a.get("hotel_disparu", True)),
     )
 
 
