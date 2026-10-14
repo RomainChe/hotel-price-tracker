@@ -1,5 +1,5 @@
 {
- "date": "2026-10-13",
+ "date": "2026-10-14",
  "devise": "EUR",
  "voyageurs": 2,
  "etapes": [
@@ -11,14 +11,14 @@
    "recommande": {
     "hotel": "Hotel Nikko Osaka",
     "note10": 8.2,
-    "nuit": 50.0,
-    "total": 350.0
+    "nuit": 51.0,
+    "total": 357.0
    },
    "moins_cher": {
-    "hotel": "Hotel Nikko Osaka",
-    "note10": 8.2,
-    "nuit": 50.0,
-    "total": 350.0
+    "hotel": "ART HOTEL Osaka Bay Tower",
+    "note10": 8.0,
+    "nuit": 51.0,
+    "total": 357.0
    }
   },
   {
@@ -29,14 +29,14 @@
    "recommande": {
     "hotel": "Hotel Tou Nishinotoin Kyoto",
     "note10": 9.4,
-    "nuit": 112.0,
-    "total": 448.0
+    "nuit": 114.0,
+    "total": 456.0
    },
    "moins_cher": {
     "hotel": "Rihga Royal Hotel Kyoto",
     "note10": 8.0,
-    "nuit": 75.0,
-    "total": 300.0
+    "nuit": 98.0,
+    "total": 392.0
    }
   },
   {
@@ -45,10 +45,10 @@
    "chk_out": "2027-05-22",
    "nuits": 5,
    "recommande": {
-    "hotel": "Tokyo Dome Hotel",
+    "hotel": "Haneda Excel Hotel Tokyu",
     "note10": 8.2,
-    "nuit": 115.0,
-    "total": 575.0
+    "nuit": 126.0,
+    "total": 630.0
    },
    "moins_cher": {
     "hotel": "Hotel Villa Fontaine Grand Haneda Airport",
@@ -60,6 +60,6 @@
  ],
  "trajets": 179.95,
  "complet": true,
- "total_recommande": 1552.95,
- "total_moins_cher": 1289.95
+ "total_recommande": 1622.95,
+ "total_moins_cher": 1388.95
 }
