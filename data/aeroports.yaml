@@ -1,0 +1,4 @@
+# Coordonnées des aéroports (degrés décimaux), pour choisir l'hôtel de la première et de la dernière nuit.
+KIX: {lat: 34.4347, lon: 135.2440}   # Kansai (Osaka)
+HND: {lat: 35.5494, lon: 139.7798}   # Haneda (Tokyo)
+NRT: {lat: 35.7720, lon: 140.3929}   # Narita (Tokyo)

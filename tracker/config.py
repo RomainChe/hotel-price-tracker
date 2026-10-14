@@ -17,6 +17,9 @@ class Ville:
     name: str
     location_key: str  # clé Xotelo (ex. g298566)
     nuits_min: int
+    poids: int = 0  # 0 = 1 + nombre d'activités ; plus il est grand, plus la ville reçoit de nuits en plus
+    proche_aeroport: bool = False  # étape d'une nuit choisie près de `aeroport` (créée par plan_stays)
+    aeroport_location_key: str = ""  # zone Xotelo de l'aéroport si elle n'est pas dans celle de la ville (KIX = Izumisano)
     aeroport: str = ""  # sert à fixer l'ordre : la ville de l'aéroport d'arrivée d'abord, celle du départ en dernier
     activites: tuple[Activite, ...] = ()  # leur nombre pèse dans la répartition des nuits supplémentaires
 
@@ -39,6 +42,8 @@ class Config:
     aeroport_arrivee: str = ""
     aeroport_depart: str = ""
     taux_jpy_eur: float = 0.0061
+    nuit_aeroport: bool = True  # 1re nuit près de l'aéroport d'arrivée, dernière près de celui du départ
+    rayon_aeroport_km: float = 15.0  # étape « près de l'aéroport » : hôtels à moins de N km, les plus proches d'abord
     alerte_total_sous: float | None = None  # hébergement recommandé, pour tous les voyageurs
     alerte_baisse_pct: float = 5.0
     alerte_hotel_disparu: bool = True
@@ -64,7 +69,8 @@ def _ville(name: str, raw: dict | None) -> Ville:
     activites = tuple(
         Activite(str(a.get("nom", "?")), bool(a.get("reservation_requise", False)), int(a.get("delai_reservation", 0)))
         for a in raw.get("activites") or [])
-    return Ville(name=str(name), location_key=str(key), nuits_min=nuits,
+    return Ville(name=str(name), location_key=str(key), nuits_min=nuits, poids=int(raw.get("poids", 0)),
+                 aeroport_location_key=str(raw.get("aeroport_location_key", "")),
                  aeroport=str(raw.get("aeroport", "")).upper(), activites=activites)
 
 
@@ -109,6 +115,8 @@ def parse_config(raw: dict) -> Config:
         candidats_max=int(s.get("candidats_max", 10)),
         aeroport_arrivee=str(voyage.get("aeroport_arrivee", "")).upper(),
         aeroport_depart=str(voyage.get("aeroport_depart", "")).upper(),
+        nuit_aeroport=bool(voyage.get("nuit_aeroport", True)),
+        rayon_aeroport_km=float(voyage.get("rayon_aeroport_km", 15)),
         taux_jpy_eur=float(raw.get("taux_jpy_eur", 0.0061)),
         alerte_total_sous=float(total_sous) if total_sous is not None else None,
         alerte_baisse_pct=float(a.get("baisse_pct", 5)), alerte_hotel_disparu=bool(a.get("hotel_disparu", True)),

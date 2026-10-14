@@ -2,6 +2,8 @@
 
 Chaque filtre renvoie aussi son libellé : l'entonnoir sert à dire quel critère assouplir quand il ne reste rien.
 """
+from math import asin, cos, radians, sin, sqrt
+
 from .config import Config
 
 # critère de config.yaml -> libellé de l'entonnoir
@@ -9,6 +11,7 @@ LABELS = {
     "note_min": "note ≥ {c.note_min:g}/10",
     "avis_min": "avis ≥ {c.avis_min}",
     "petit_dejeuner": "petit-déjeuner inclus",
+    "rayon_aeroport_km": "à ≤ {c.rayon_aeroport_km:g} km de l'aéroport",
     "budget_max_nuit": "prix ≤ {c.budget_max_nuit:g} €/nuit",
 }
 
@@ -23,6 +26,19 @@ def filter_hotels(hotels, c: Config):
         hotels = [h for h in hotels if keep(h)]
         funnel.append((crit, len(hotels)))
     return hotels, funnel
+
+
+def km_between(lat1, lon1, lat2, lon2) -> float:
+    """Distance à vol d'oiseau (haversine), en km."""
+    a = sin(radians(lat2 - lat1) / 2) ** 2 + cos(radians(lat1)) * cos(radians(lat2)) * sin(radians(lon2 - lon1) / 2) ** 2
+    return 12742 * asin(sqrt(a))
+
+
+def near_airport(hotels, airport: dict, c: Config):
+    """Hôtels à ≤ `rayon_aeroport_km` de l'aéroport (lat/lon), les plus proches d'abord. Retourne ([(hôtel, km)], entonnoir)."""
+    dist = [(h, km_between(h.lat, h.lon, airport["lat"], airport["lon"])) for h in hotels if h.lat is not None and h.lon is not None]
+    kept = sorted((x for x in dist if x[1] <= c.rayon_aeroport_km), key=lambda x: x[1])
+    return kept, [("rayon_aeroport_km", len(kept))]
 
 
 def filter_offers(offers, c: Config):

@@ -7,9 +7,9 @@ from datetime import date, timedelta
 from pathlib import Path
 
 from .config import Config, load_config
-from .filters import explain_empty, filter_hotels, filter_offers
+from .filters import explain_empty, filter_hotels, filter_offers, near_airport
 from .itineraire import build, load_trajets, plan_stays, resume
-from .models import Offer, rooms_for
+from .models import Offer, label, rooms_for
 from .sources.sample import Sample
 from .sources.xotelo import BudgetExhausted, Xotelo
 from .suivi import alerts, dashboard, load_history, rows_for, write_history
@@ -28,7 +28,7 @@ class CityResult:
     message: str = ""  # pourquoi il n'y a rien, ou quelle panne
 
 
-def run(cfg: Config, source) -> list[CityResult]:
+def run(cfg: Config, source, aeroports: dict | None = None) -> list[CityResult]:
     rooms, adults = rooms_for(cfg.voyageurs)
     results = []
     for ville, chk_in, nights in plan_stays(cfg):
@@ -36,6 +36,14 @@ def run(cfg: Config, source) -> list[CityResult]:
         results.append(res)
         try:
             hotels, funnel = filter_hotels(source.list_hotels(ville.location_key), cfg)
+            airport = (aeroports or {}).get(ville.aeroport)
+            if ville.proche_aeroport and not airport:
+                raise ValueError(f"aéroport {ville.aeroport} absent de data/aeroports.yaml")
+            if ville.proche_aeroport:
+                near, f_near = near_airport(hotels, airport, cfg)
+                hotels, funnel, km = [h for h, _ in near], funnel + f_near, {h.key: d for h, d in near}
+            else:
+                km = {}
             offers, errors = [], 0
             for h in hotels[:cfg.candidats_max]:
                 try:
@@ -47,7 +55,7 @@ def run(cfg: Config, source) -> list[CityResult]:
                     continue
                 if rates:
                     ota, rate = min(rates, key=lambda r: r[1])
-                    offers.append(Offer(h, ota, rate, nights, rooms))
+                    offers.append(Offer(h, ota, rate, nights, rooms, km.get(h.key)))
             offers, f2 = filter_offers(offers, cfg)
             res.offers = sorted(offers, key=lambda o: o.rate)
             if not res.offers:
@@ -63,7 +71,7 @@ def render(cfg: Config, results: list[CityResult]) -> str:
     out = [f"{cfg.voyageurs} voyageur(s), note ≥ {cfg.note_min:g}/10, avis ≥ {cfg.avis_min}"
            + (f", ≤ {cfg.budget_max_nuit:g} €/nuit/chambre" if cfg.budget_max_nuit is not None else "")]
     for r in results:
-        out.append(f"\n{r.ville.capitalize()} · {r.chk_in} → {r.chk_out}")
+        out.append(f"\n{label(r.ville)} · {r.chk_in} → {r.chk_out}")
         for o in r.offers[:SHOWN]:
             out.append(f"  {o.hotel.name} · {o.hotel.rating * 2:g}/10 ({o.hotel.reviews} avis) · "
                        f"{o.rate:g} {cfg.devise}/nuit via {o.ota} · total {o.total:g} {cfg.devise}")
@@ -84,8 +92,8 @@ def main():
     except ValueError as e:  # erreur de configuration : message clair, sans trace
         sys.exit(f"Configuration invalide : {e}")
     source = Sample() if args.dry_run else Xotelo(cfg.max_requests, cfg.pause_seconds)
-    results = run(cfg, source)
-    trajets = load_trajets(ROOT / "data" / "trajets.yaml")
+    results = run(cfg, source, load_trajets(ROOT / "data" / "aeroports.yaml"))
+    trajets =load_trajets(ROOT / "data" / "trajets.yaml")
     itineraire = build(cfg, results, trajets)
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(itineraire, encoding="utf-8")

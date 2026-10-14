@@ -12,7 +12,7 @@ TRAJETS = {"kyoto-osaka": {"mode": "JR", "duree_min": 30, "prix_jpy": 1000, "res
            "kyoto-tokyo": {"mode": "Shinkansen", "duree_min": 135, "prix_jpy": 10000, "reservation": True}}
 
 
-def cfg(villes=None, depart="2027-05-22", taux=0.01):
+def cfg(villes=None, depart="2027-05-22", taux=0.01, nuit_aeroport=False):
     villes = villes or {
         "tokyo": {"xotelo_location_key": "g3", "nuits_min": 4, "aeroport": "HND"},
         "kyoto": {"xotelo_location_key": "g2", "nuits_min": 3},
@@ -20,7 +20,8 @@ def cfg(villes=None, depart="2027-05-22", taux=0.01):
                   "activites": [{"nom": "USJ", "reservation_requise": True, "delai_reservation": 30}]},
     }
     return parse_config({"voyage": {"arrivee": "2027-05-06", "depart": depart, "aeroport_arrivee": "KIX",
-                                    "aeroport_depart": "HND"},
+                                    "aeroport_depart": "HND",
+                                    "nuit_aeroport": nuit_aeroport},
                          "voyageurs": 2, "taux_jpy_eur": taux, "contraintes": {"note_min": 8, "avis_min": 100},
                          "villes": villes})
 
@@ -93,6 +94,58 @@ class ResumeTest(unittest.TestCase):
         self.assertFalse(r["complet"])
         self.assertTrue(all(e["recommande"] is None and e["moins_cher"] is None for e in r["etapes"]))
         self.assertFalse(resume(cfg(), run(cfg(), Sample()), {}, date(2026, 10, 13))["complet"])
+
+
+class AeroportTest(unittest.TestCase):
+    AEROPORTS = {"KIX": {"lat": 34.4347, "lon": 135.2440}, "HND": {"lat": 35.5494, "lon": 139.7798}}
+
+    def test_premiere_et_derniere_nuit_pres_des_aeroports(self):
+        plan = plan_stays(cfg(nuit_aeroport=True))
+        self.assertEqual([(v.name, n) for v, _, n in plan], [("kix", 1), ("osaka", 6), ("kyoto", 4), ("tokyo", 4), ("hnd", 1)])
+        self.assertEqual(sum(n for _, _, n in plan), 16)
+        self.assertEqual([d for _, d, _ in plan][-2:], [date(2027, 5, 17), date(2027, 5, 21)])
+        self.assertTrue(plan[0][0].proche_aeroport and plan[-1][0].proche_aeroport and not plan[1][0].proche_aeroport)
+
+    def test_poids_donne_plus_de_nuits_a_tokyo(self):
+        villes = {"tokyo": {"xotelo_location_key": "g3", "nuits_min": 4, "aeroport": "HND", "poids": 3},
+                  "kyoto": {"xotelo_location_key": "g2", "nuits_min": 3},
+                  "osaka": {"xotelo_location_key": "g1", "nuits_min": 3, "aeroport": "KIX"}}
+        nights = {v.name: n for v, _, n in plan_stays(cfg(villes))}
+        self.assertEqual(sum(nights.values()), 16)
+        self.assertEqual(max(nights, key=nights.get), "tokyo")
+
+    def test_hotels_proches_tries_par_distance_et_lien_de_reservation(self):
+        class Geo:  # un hôtel à ~1 km de KIX, un à ~50 km (Osaka centre), un sans coordonnées
+            NAME = "geo"
+            def list_hotels(self, key):
+                return [Hotel("a", "Loin", "Hotel", 4.5, 500, lat=34.69, lon=135.50),
+                        Hotel("b", "Proche", "Hotel", 4.0, 300, lat=34.44, lon=135.25),
+                        Hotel("c", "Sans geo", "Hotel", 4.5, 500)]
+            def rates(self, *a):
+                return [("Booking.com", 100.0)]
+        c = cfg(nuit_aeroport=True)
+        results = run(c, Geo(), self.AEROPORTS)
+        first = results[0]
+        self.assertEqual(first.ville, "kix")
+        self.assertEqual([o.hotel.name for o in first.offers], ["Proche"])
+        self.assertLess(first.offers[0].km, 5)
+        md = build(c, results, TRAJETS)
+        self.assertIn("https://www.booking.com/searchresults.html?ss=Proche&checkin=2027-05-06&checkout=2027-05-07", md)
+        self.assertIn("km de l'aéroport", md)
+        self.assertEqual(resume(c, results, TRAJETS, date(2026, 10, 13))["etapes"][0]["recommande"]["lien"].split("?")[0],
+                         "https://www.booking.com/searchresults.html")
+
+    def test_aeroport_inconnu_est_dit(self):
+        results = run(cfg(nuit_aeroport=True), Sample(), {})
+        self.assertIn("absent de data/aeroports.yaml", results[0].message)
+
+
+if __name__ == "__main__":
+    unittest.main()
+
+
+if __name__ == "__main__":
+    unittest.main()
 
 
 if __name__ == "__main__":

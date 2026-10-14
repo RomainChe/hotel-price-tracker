@@ -4,6 +4,7 @@ voyage:                       # copié UNE fois de flight-price-tracker, à teni
   depart: 2027-05-22
   aeroport_arrivee: KIX       # la ville dont `aeroport` correspond passe en premier
   aeroport_depart: HND        # ... et celle-ci en dernier
+  rayon_aeroport_km: 15       # 1re et dernière nuit : hôtels à moins de N km de ces aéroports (data/aeroports.yaml)
 voyageurs: 2
 devise: EUR
 taux_jpy_eur: 0.0061          # ¥ → € pour les trajets
@@ -25,6 +26,7 @@ villes:                       # l'ordre est fixé selon les aéroports ; les nui
     xotelo_location_key: g298566
     nuits_min: 3
     aeroport: KIX
+    aeroport_location_key: g298200   # Izumisano (Rinku Town) : l'aéroport n'est pas dans la liste d'Osaka
     activites:
       - {nom: Universal Studios Japan, reservation_requise: true, delai_reservation: 30}
   kyoto:
@@ -33,6 +35,7 @@ villes:                       # l'ordre est fixé selon les aéroports ; les nui
   tokyo:
     xotelo_location_key: g298184
     nuits_min: 4
+    poids: 3                  # le plus de nuits en plus (défaut : 1 + nombre d'activités)
     aeroport: HND
 
 alertes:                      # évaluées à chaque relevé réel, comparées au relevé précédent (historique/prix.csv)

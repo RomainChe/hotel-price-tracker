@@ -3,7 +3,7 @@ import csv
 from datetime import date
 
 from .itineraire import recommended
-from .models import Hotel, Offer
+from .models import Hotel, Offer, label
 
 FIELDS = ["date", "ville", "chk_in", "chk_out", "hotel_key", "hotel", "rating", "reviews", "ota", "rate", "nights", "rooms"]
 
@@ -63,9 +63,9 @@ def alerts(cfg, results, history: list[dict], today: date) -> list[str]:
             cur = now.get(old.hotel.key)
             if cur is None:
                 if cfg.alerte_hotel_disparu:
-                    out.append(f"- {r.ville.capitalize()} : {old.hotel.name} n'a plus de tarif (était à {old.rate:g} {cfg.devise}/nuit).")
+                    out.append(f"- {label(r.ville)} : {old.hotel.name} n'a plus de tarif (était à {old.rate:g} {cfg.devise}/nuit).")
             elif cur.rate <= old.rate * (1 - cfg.alerte_baisse_pct / 100):
-                out.append(f"- {r.ville.capitalize()} : {old.hotel.name} baisse de {old.rate:g} à {cur.rate:g} {cfg.devise}/nuit "
+                out.append(f"- {label(r.ville)} : {old.hotel.name} baisse de {old.rate:g} à {cur.rate:g} {cfg.devise}/nuit "
                            f"({r.chk_in} → {r.chk_out}, {cur.ota}).")
     if cfg.alerte_total_sous is not None and results and all(r.offers for r in results):
         total = sum(recommended(r.offers).total for r in results)
@@ -87,7 +87,7 @@ def dashboard(cfg, history: list[dict]) -> str:
         t = totals.setdefault(r["date"], {})
         t[r["ville"]] = min(t.get(r["ville"], tot), tot)
     out = [f"# Suivi des prix ({cfg.devise})", "",
-           "| Relevé | " + " | ".join(f"{v.capitalize()} (/nuit)" for v in villes) + " | Total le moins cher |",
+           "| Relevé | " + " | ".join(f"{label(v)} (/nuit)" for v in villes) + " | Total le moins cher |",
            "|" + " --- |" * (len(villes) + 2)]
     for day in sorted(by_day, reverse=True)[:30]:
         cells = [f"{by_day[day][v]:g}" if v in by_day[day] else "—" for v in villes]

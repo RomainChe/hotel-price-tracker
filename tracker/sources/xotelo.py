@@ -51,10 +51,12 @@ class Xotelo:
             summary = h.get("review_summary") or {}
             if not h.get("key") or summary.get("rating") is None:  # sans note : impossible à filtrer, donc écarté
                 continue
+            geo = h.get("geo") or {}
             hotels.append(Hotel(
                 key=h["key"], name=h.get("name", ""), accommodation_type=h.get("accommodation_type") or "",
                 rating=float(summary["rating"]), reviews=int(summary.get("count") or 0), url=h.get("url") or "",
                 breakfast="Breakfast included" in (h.get("merchandising_labels") or []),
+                lat=geo.get("latitude"), lon=geo.get("longitude"),
             ))
         return hotels
 
