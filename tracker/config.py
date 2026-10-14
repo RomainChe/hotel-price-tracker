@@ -1,5 +1,5 @@
 """Lecture et validation de config.yaml."""
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from datetime import date
 
 import yaml
@@ -19,8 +19,9 @@ class Ville:
     nuits_min: int
     poids: int = 0  # 0 = 1 + nombre d'activités ; plus il est grand, plus la ville reçoit de nuits en plus
     proche_aeroport: bool = False  # étape d'une nuit choisie près de `aeroport` (créée par plan_stays)
-    aeroport_location_key: str = ""  # zone Xotelo de l'aéroport si elle n'est pas dans celle de la ville (KIX = Izumisano)
-    aeroport: str = ""  # sert à fixer l'ordre : la ville de l'aéroport d'arrivée d'abord, celle du départ en dernier
+    aeroports: dict = field(default_factory=dict)  # code -> clé Xotelo de la zone de l'aéroport ("" = celle de la ville)
+    parent: str = ""  # ville d'une étape « aéroport » (pour retrouver le trajet)
+    aeroport: str = ""  # code de l'étape « aéroport » ; vide pour une ville. # sert à fixer l'ordre : la ville de l'aéroport d'arrivée d'abord, celle du départ en dernier
     activites: tuple[Activite, ...] = ()  # leur nombre pèse dans la répartition des nuits supplémentaires
 
 
@@ -42,6 +43,8 @@ class Config:
     aeroport_arrivee: str = ""
     aeroport_depart: str = ""
     taux_jpy_eur: float = 0.0061
+    vols_csv: str = ""  # prix de flight-price-tracker (fichier ou URL https) : active la comparaison vol + hôtel
+    vols_par_recherche: int = 2  # vols les moins chers essayés par recherche de vols
     nuit_aeroport: bool = True  # 1re nuit près de l'aéroport d'arrivée, dernière près de celui du départ
     rayon_aeroport_km: float = 15.0  # étape « près de l'aéroport » : hôtels à moins de N km, les plus proches d'abord
     alerte_total_sous: float | None = None  # hébergement recommandé, pour tous les voyageurs
@@ -58,6 +61,17 @@ def _date(value, label) -> date:
         raise ValueError(f"{label} : date invalide « {value} » (format attendu AAAA-MM-JJ).") from None
 
 
+def _aeroports(raw: dict) -> dict:
+    """`aeroports: {KIX: g298200, HND: null}` (ou liste) ; l'ancienne forme `aeroport: KIX` + `aeroport_location_key` reste lue."""
+    a = raw.get("aeroports")
+    if isinstance(a, dict):
+        return {str(k).upper(): str(v or "") for k, v in a.items()}
+    if isinstance(a, list):
+        return {str(k).upper(): "" for k in a}
+    one = str(raw.get("aeroport", "")).upper()
+    return {one: str(raw.get("aeroport_location_key", ""))} if one else {}
+
+
 def _ville(name: str, raw: dict | None) -> Ville:
     raw = raw or {}
     key = raw.get("xotelo_location_key")
@@ -70,8 +84,7 @@ def _ville(name: str, raw: dict | None) -> Ville:
         Activite(str(a.get("nom", "?")), bool(a.get("reservation_requise", False)), int(a.get("delai_reservation", 0)))
         for a in raw.get("activites") or [])
     return Ville(name=str(name), location_key=str(key), nuits_min=nuits, poids=int(raw.get("poids", 0)),
-                 aeroport_location_key=str(raw.get("aeroport_location_key", "")),
-                 aeroport=str(raw.get("aeroport", "")).upper(), activites=activites)
+                 aeroports=_aeroports(raw), activites=activites)
 
 
 def parse_config(raw: dict) -> Config:
@@ -115,6 +128,8 @@ def parse_config(raw: dict) -> Config:
         candidats_max=int(s.get("candidats_max", 10)),
         aeroport_arrivee=str(voyage.get("aeroport_arrivee", "")).upper(),
         aeroport_depart=str(voyage.get("aeroport_depart", "")).upper(),
+        vols_csv=str((raw.get("vols") or {}).get("csv", "")),
+        vols_par_recherche=max(1, int((raw.get("vols") or {}).get("par_recherche", 2))),
         nuit_aeroport=bool(voyage.get("nuit_aeroport", True)),
         rayon_aeroport_km=float(voyage.get("rayon_aeroport_km", 15)),
         taux_jpy_eur=float(raw.get("taux_jpy_eur", 0.0061)),

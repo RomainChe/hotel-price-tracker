@@ -17,7 +17,7 @@ contraintes:
 
 source:
   nom: xotelo
-  max_requests: 200           # par exécution
+  max_requests: 450           # par exécution
   pause_seconds: [1, 3]
   candidats_max: 10           # hôtels dont on demande les tarifs, par ville
 
@@ -25,8 +25,7 @@ villes:                       # l'ordre est fixé selon les aéroports ; les nui
   osaka:
     xotelo_location_key: g298566
     nuits_min: 3
-    aeroport: KIX
-    aeroport_location_key: g298200   # Izumisano (Rinku Town) : l'aéroport n'est pas dans la liste d'Osaka
+    aeroports: {KIX: g298200}   # code: zone Xotelo de l'aéroport quand elle n'est pas dans la ville (Izumisano / Rinku Town)
     activites:
       - {nom: Universal Studios Japan, reservation_requise: true, delai_reservation: 30}
   kyoto:
@@ -36,7 +35,11 @@ villes:                       # l'ordre est fixé selon les aéroports ; les nui
     xotelo_location_key: g298184
     nuits_min: 4
     poids: 3                  # le plus de nuits en plus (défaut : 1 + nombre d'activités)
-    aeroport: HND
+    aeroports: {HND: null, NRT: g298161}   # Narita (g298161) est une zone Xotelo à part ; Haneda est dans Tokyo
+
+vols:                         # prix de vols de flight-price-tracker : un itinéraire d'hôtels par vol, le total vols + hôtels le plus bas est retenu
+  csv: https://raw.githubusercontent.com/RomainChe/flight-price-tracker/main/data/prices.csv
+  par_recherche: 2            # vols les moins chers essayés par recherche (dates fournies, dates flexibles...)
 
 alertes:                      # évaluées à chaque relevé réel, comparées au relevé précédent (historique/prix.csv)
   total_sous: 600             # € : alerte si l'hébergement recommandé (complet) passe sous ce montant

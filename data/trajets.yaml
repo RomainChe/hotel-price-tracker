@@ -5,4 +5,5 @@ kyoto-tokyo: {mode: Shinkansen Nozomi, duree_min: 135, prix_jpy: 14170, reservat
 osaka-tokyo: {mode: Shinkansen Nozomi (Shin-Osaka), duree_min: 150, prix_jpy: 14720, reservation: true}
 # Aéroport ↔ ville de la première / dernière nuit (clé : code de l'aéroport en minuscules).
 kix-osaka: {mode: JR Kansai Airport Rapid, duree_min: 70, prix_jpy: 1210, reservation: false}
+nrt-tokyo: {mode: Narita Express, duree_min: 60, prix_jpy: 3070, reservation: false}
 hnd-tokyo: {mode: Keikyu / monorail, duree_min: 30, prix_jpy: 500, reservation: false}

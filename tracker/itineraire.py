@@ -11,9 +11,9 @@ from .models import label, rooms_for
 def order_cities(cfg):
     """Ville de l'aéroport d'arrivée d'abord, celle du départ en dernier, les autres dans l'ordre de config.yaml."""
     def rank(v):
-        if cfg.aeroport_arrivee and v.aeroport == cfg.aeroport_arrivee:
+        if cfg.aeroport_arrivee and cfg.aeroport_arrivee in v.aeroports:
             return 0
-        return 2 if cfg.aeroport_depart and v.aeroport == cfg.aeroport_depart else 1
+        return 2 if cfg.aeroport_depart and cfg.aeroport_depart in v.aeroports else 1
     return sorted(cfg.villes, key=rank)  # tri stable
 
 
@@ -26,25 +26,34 @@ def plan_stays(cfg):
     heaviest = sorted(range(len(villes)), key=lambda i: -w[i])
     for k in range(extra - sum(n - v.nuits_min for n, v in zip(nights, villes))):  # reste de la division
         nights[heaviest[k % len(villes)]] += 1
+    stays = list(zip(villes, nights))
+    if cfg.nuit_aeroport:
+        stays = _airport_nights(cfg, stays)
     plan, day = [], cfg.arrivee
-    for v, n in zip(villes, nights):
+    for v, n in stays:
         plan.append((v, day, n))
         day += timedelta(days=n)
-    return _airport_nights(cfg, plan)
-
-
-def _airport_nights(cfg, plan):
-    """Première nuit près de l'aéroport d'arrivée, dernière près de celui du départ : étapes d'une nuit nommées par le code."""
-    air = lambda v: replace(v, name=v.aeroport.lower(), location_key=v.aeroport_location_key or v.location_key, nuits_min=1, poids=0, activites=(), proche_aeroport=True)  # noqa: E731
-    if not cfg.nuit_aeroport:
-        return plan
-    v, d, n = plan[0]
-    if cfg.aeroport_arrivee and v.aeroport == cfg.aeroport_arrivee and n >= 2:
-        plan[:1] = [(air(v), d, 1), (v, d + timedelta(days=1), n - 1)]
-    v, d, n = plan[-1]
-    if cfg.aeroport_depart and v.aeroport == cfg.aeroport_depart and n >= 2:
-        plan[-1:] = [(v, d, n - 1), (air(v), d + timedelta(days=n - 1), 1)]
     return plan
+
+
+def _airport_nights(cfg, stays):
+    """Première nuit près de l'aéroport d'arrivée, dernière près de celui du départ : étapes d'une nuit nommées par le code.
+
+    Arrivée et départ par la même ville (ex. Narita ↔ Narita) : nuit d'arrivée, autres villes, séjour principal, nuit de départ.
+    """
+    a, d = cfg.aeroport_arrivee, cfg.aeroport_depart
+    air = lambda v, code: replace(v, name=code.lower(), parent=v.name, aeroport=code, nuits_min=1, poids=0,  # noqa: E731
+                                  location_key=v.aeroports.get(code) or v.location_key, activites=(), proche_aeroport=True)
+    out = list(stays)
+    first, n0 = out[0]
+    if len(out) > 1 and a in first.aeroports and d in first.aeroports:
+        return [(air(first, a), 1), *out[1:], (first, n0 - 2), (air(first, d), 1)] if n0 >= 3 else out
+    if a in first.aeroports and n0 >= 2:
+        out[:1] = [(air(first, a), 1), (first, n0 - 1)]
+    last, nl = out[-1]
+    if d in last.aeroports and nl >= 2:
+        out[-1:] = [(last, nl - 1), (air(last, d), 1)]
+    return out
 
 
 def booking_url(o, r, cfg) -> str:
@@ -67,6 +76,12 @@ def recommended(offers):
     # ponytail : heuristique qualité/prix à un seuil fixe ; à affiner avec l'historique (Phase 3)
     cap = offers[0].rate * 1.5
     return max((o for o in offers if o.rate <= cap), key=lambda o: (o.hotel.rating, o.hotel.reviews, -o.rate))
+
+
+def leg(trajets: dict, a, b):
+    """Trajet entre deux étapes ; pour une étape aéroport, le trajet vers l'autre ville part de sa ville (Narita → Osaka = Tokyo → Osaka)."""
+    key = lambda x, y: "-".join(sorted((x, y)))  # noqa: E731
+    return trajets.get(key(a.ville, b.ville)) or trajets.get(key(a.parent or a.ville, b.parent or b.ville))
 
 
 def _md(text: str) -> str:
@@ -98,7 +113,7 @@ def build(cfg, results, trajets: dict) -> str:
 
     legs, trajets_eur = [], 0.0
     for a, b in zip(results, results[1:]):
-        t = trajets.get("-".join(sorted((a.ville, b.ville))))
+        t = leg(trajets, a, b)
         if not t:
             notes.append(f"Trajet {label(a.ville)} → {label(b.ville)} absent de data/trajets.yaml : non compté.")
             complete = False
@@ -139,7 +154,7 @@ def resume(cfg, results, trajets: dict, today: date) -> dict:
     etapes = [{"ville": r.ville, "chk_in": r.chk_in, "chk_out": r.chk_out, "nuits": r.nights,
                "recommande": pick(recommended(r.offers) if r.offers else None, r),
                "moins_cher": pick(r.offers[0] if r.offers else None, r)} for r in results]
-    legs = [trajets.get("-".join(sorted((a.ville, b.ville)))) for a, b in zip(results, results[1:])]
+    legs = [leg(trajets, a, b) for a, b in zip(results, results[1:])]
     trajets_eur = sum(t["prix_jpy"] * cfg.voyageurs * cfg.taux_jpy_eur for t in legs if t)
     done = [r for r in results if r.offers]
     return {"date": today.isoformat(), "devise": cfg.devise, "voyageurs": cfg.voyageurs, "etapes": etapes,
