@@ -1,5 +1,5 @@
 {
- "date": "2026-10-17",
+ "date": "2026-10-18",
  "devise": "EUR",
  "voyageurs": 2,
  "etapes": [
@@ -11,16 +11,16 @@
    "recommande": {
     "hotel": "Richmond Hotel Narita",
     "note10": 8.6,
-    "nuit": 73.0,
-    "total": 73.0,
-    "lien": "https://www.booking.com/searchresults.html?ss=Richmond+Hotel+Narita&checkin=2027-05-04&checkout=2027-05-05&group_adults=2&no_rooms=1&selected_currency=EUR",
+    "nuit": 71.0,
+    "total": 71.0,
+    "lien": "https://www.agoda.com/search?textToSearch=Richmond+Hotel+Narita&checkIn=2027-05-04&checkOut=2027-05-05&adults=2&rooms=1&currencyCode=EUR",
     "km": 6.788147781289532
    },
    "moins_cher": {
     "hotel": "Hotel Nikko Narita",
     "note10": 8.2,
-    "nuit": 66.0,
-    "total": 66.0,
+    "nuit": 65.0,
+    "total": 65.0,
     "lien": "https://www.agoda.com/search?textToSearch=Hotel+Nikko+Narita&checkIn=2027-05-04&checkOut=2027-05-05&adults=2&rooms=1&currencyCode=EUR",
     "km": 1.8063403051013733
    }
@@ -31,19 +31,19 @@
    "chk_out": "2027-05-08",
    "nuits": 3,
    "recommande": {
-    "hotel": "Hotel Nikko Osaka",
-    "note10": 8.2,
-    "nuit": 56.0,
-    "total": 168.0,
-    "lien": "https://www.agoda.com/search?textToSearch=Hotel+Nikko+Osaka&checkIn=2027-05-05&checkOut=2027-05-08&adults=2&rooms=1&currencyCode=EUR",
+    "hotel": "The OneFive Osaka Namba-Kuromon",
+    "note10": 8.8,
+    "nuit": 45.0,
+    "total": 135.0,
+    "lien": "https://www.agoda.com/search?textToSearch=The+OneFive+Osaka+Namba-Kuromon&checkIn=2027-05-05&checkOut=2027-05-08&adults=2&rooms=1&currencyCode=EUR",
     "km": null
    },
    "moins_cher": {
-    "hotel": "ART HOTEL Osaka Bay Tower",
-    "note10": 8.0,
-    "nuit": 48.0,
-    "total": 144.0,
-    "lien": "https://www.booking.com/searchresults.html?ss=ART+HOTEL+Osaka+Bay+Tower&checkin=2027-05-05&checkout=2027-05-08&group_adults=2&no_rooms=1&selected_currency=EUR",
+    "hotel": "The OneFive Osaka Namba-Kuromon",
+    "note10": 8.8,
+    "nuit": 45.0,
+    "total": 135.0,
+    "lien": "https://www.agoda.com/search?textToSearch=The+OneFive+Osaka+Namba-Kuromon&checkIn=2027-05-05&checkOut=2027-05-08&adults=2&rooms=1&currencyCode=EUR",
     "km": null
    }
   },
@@ -55,17 +55,17 @@
    "recommande": {
     "hotel": "Hotel Tou Nishinotoin Kyoto",
     "note10": 9.4,
-    "nuit": 106.0,
-    "total": 318.0,
+    "nuit": 103.0,
+    "total": 309.0,
     "lien": "https://www.agoda.com/search?textToSearch=Hotel+Tou+Nishinotoin+Kyoto&checkIn=2027-05-08&checkOut=2027-05-11&adults=2&rooms=1&currencyCode=EUR",
     "km": null
    },
    "moins_cher": {
-    "hotel": "Miyako City Kintetsu Kyoto Station",
-    "note10": 8.2,
-    "nuit": 78.0,
-    "total": 234.0,
-    "lien": "https://www.tripadvisor.com/Hotel_Review-g298564-d2222819-Reviews-Miyako_City_Kintetsu_Kyoto_Station-Kyoto_Kyoto_Prefecture_Kinki.html",
+    "hotel": "Rihga Royal Hotel Kyoto",
+    "note10": 8.0,
+    "nuit": 83.0,
+    "total": 249.0,
+    "lien": "https://www.agoda.com/search?textToSearch=Rihga+Royal+Hotel+Kyoto&checkIn=2027-05-08&checkOut=2027-05-11&adults=2&rooms=1&currencyCode=EUR",
     "km": null
    }
   },
@@ -75,19 +75,19 @@
    "chk_out": "2027-05-15",
    "nuits": 4,
    "recommande": {
-    "hotel": "Hotel Villa Fontaine Grand Haneda Airport",
-    "note10": 8.0,
-    "nuit": 99.0,
-    "total": 396.0,
-    "lien": "https://www.tripadvisor.com/Hotel_Review-g1066454-d20063612-Reviews-Hotel_Villa_Fontaine_Grand_Haneda_Airport-Ota_Tokyo_Tokyo_Prefecture_Kanto.html",
+    "hotel": "Solaria nishitetsu hotel Ginza",
+    "note10": 8.6,
+    "nuit": 160.0,
+    "total": 640.0,
+    "lien": "https://www.agoda.com/search?textToSearch=Solaria+nishitetsu+hotel+Ginza&checkIn=2027-05-11&checkOut=2027-05-15&adults=2&rooms=1&currencyCode=EUR",
     "km": null
    },
    "moins_cher": {
-    "hotel": "Hotel Villa Fontaine Grand Haneda Airport",
+    "hotel": "Hotel Sunroute Ginza",
     "note10": 8.0,
-    "nuit": 99.0,
-    "total": 396.0,
-    "lien": "https://www.tripadvisor.com/Hotel_Review-g1066454-d20063612-Reviews-Hotel_Villa_Fontaine_Grand_Haneda_Airport-Ota_Tokyo_Tokyo_Prefecture_Kanto.html",
+    "nuit": 107.0,
+    "total": 428.0,
+    "lien": "https://www.agoda.com/search?textToSearch=Hotel+Sunroute+Ginza&checkIn=2027-05-11&checkOut=2027-05-15&adults=2&rooms=1&currencyCode=EUR",
     "km": null
    }
   },
@@ -99,16 +99,16 @@
    "recommande": {
     "hotel": "Richmond Hotel Narita",
     "note10": 8.6,
-    "nuit": 71.0,
-    "total": 71.0,
+    "nuit": 70.0,
+    "total": 70.0,
     "lien": "https://www.agoda.com/search?textToSearch=Richmond+Hotel+Narita&checkIn=2027-05-15&checkOut=2027-05-16&adults=2&rooms=1&currencyCode=EUR",
     "km": 6.788147781289532
    },
    "moins_cher": {
     "hotel": "Hotel Nikko Narita",
     "note10": 8.2,
-    "nuit": 61.0,
-    "total": 61.0,
+    "nuit": 60.0,
+    "total": 60.0,
     "lien": "https://www.agoda.com/search?textToSearch=Hotel+Nikko+Narita&checkIn=2027-05-15&checkOut=2027-05-16&adults=2&rooms=1&currencyCode=EUR",
     "km": 1.8063403051013733
    }
@@ -116,8 +116,8 @@
  ],
  "trajets": 396.99,
  "complet": true,
- "total_recommande": 1422.99,
- "total_moins_cher": 1297.99,
+ "total_recommande": 1621.99,
+ "total_moins_cher": 1333.99,
  "vol": {
   "recherche": "Japon mai 2027",
   "arrivee": "NRT",
@@ -126,5 +126,5 @@
   "jour_retour": "2027-05-16",
   "prix_personne": 831.0
  },
- "total_avec_vols": 2959.99
+ "total_avec_vols": 2995.99
 }
