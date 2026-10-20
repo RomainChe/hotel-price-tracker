@@ -1,5 +1,5 @@
 {
- "date": "2026-10-19",
+ "date": "2026-10-20",
  "devise": "EUR",
  "voyageurs": 2,
  "etapes": [
@@ -19,8 +19,8 @@
    "moins_cher": {
     "hotel": "Hotel Nikko Narita",
     "note10": 8.2,
-    "nuit": 65.0,
-    "total": 65.0,
+    "nuit": 66.0,
+    "total": 66.0,
     "lien": "https://www.agoda.com/search?textToSearch=Hotel+Nikko+Narita&checkIn=2027-05-04&checkOut=2027-05-05&adults=2&rooms=1&currencyCode=EUR",
     "km": 1.8063403051013733
    }
@@ -31,19 +31,19 @@
    "chk_out": "2027-05-08",
    "nuits": 3,
    "recommande": {
-    "hotel": "Hotel Nikko Osaka",
-    "note10": 8.2,
-    "nuit": 56.0,
-    "total": 168.0,
-    "lien": "https://www.agoda.com/search?textToSearch=Hotel+Nikko+Osaka&checkIn=2027-05-05&checkOut=2027-05-08&adults=2&rooms=1&currencyCode=EUR",
+    "hotel": "Remm Shin Osaka",
+    "note10": 8.4,
+    "nuit": 64.0,
+    "total": 192.0,
+    "lien": "https://www.agoda.com/search?textToSearch=Remm+Shin+Osaka&checkIn=2027-05-05&checkOut=2027-05-08&adults=2&rooms=1&currencyCode=EUR",
     "km": null
    },
    "moins_cher": {
-    "hotel": "Hotel Nikko Osaka",
-    "note10": 8.2,
-    "nuit": 56.0,
-    "total": 168.0,
-    "lien": "https://www.agoda.com/search?textToSearch=Hotel+Nikko+Osaka&checkIn=2027-05-05&checkOut=2027-05-08&adults=2&rooms=1&currencyCode=EUR",
+    "hotel": "ART HOTEL Osaka Bay Tower",
+    "note10": 8.0,
+    "nuit": 48.0,
+    "total": 144.0,
+    "lien": "https://www.booking.com/searchresults.html?ss=ART+HOTEL+Osaka+Bay+Tower&checkin=2027-05-05&checkout=2027-05-08&group_adults=2&no_rooms=1&selected_currency=EUR",
     "km": null
    }
   },
@@ -53,19 +53,19 @@
    "chk_out": "2027-05-11",
    "nuits": 3,
    "recommande": {
-    "hotel": "Mitsui Garden Hotel Kyoto Shijo",
+    "hotel": "Hotel Elcient Kyoto Hachijoguchi",
     "note10": 8.0,
-    "nuit": 52.0,
-    "total": 156.0,
-    "lien": "https://www.agoda.com/search?textToSearch=Mitsui+Garden+Hotel+Kyoto+Shijo&checkIn=2027-05-08&checkOut=2027-05-11&adults=2&rooms=1&currencyCode=EUR",
+    "nuit": 57.0,
+    "total": 171.0,
+    "lien": "https://www.tripadvisor.com/Hotel_Review-g298564-d1114922-Reviews-Hotel_Elcient_Kyoto_Hachijoguchi-Kyoto_Kyoto_Prefecture_Kinki.html",
     "km": null
    },
    "moins_cher": {
-    "hotel": "Mitsui Garden Hotel Kyoto Shijo",
+    "hotel": "Hotel Elcient Kyoto Hachijoguchi",
     "note10": 8.0,
-    "nuit": 52.0,
-    "total": 156.0,
-    "lien": "https://www.agoda.com/search?textToSearch=Mitsui+Garden+Hotel+Kyoto+Shijo&checkIn=2027-05-08&checkOut=2027-05-11&adults=2&rooms=1&currencyCode=EUR",
+    "nuit": 57.0,
+    "total": 171.0,
+    "lien": "https://www.tripadvisor.com/Hotel_Review-g298564-d1114922-Reviews-Hotel_Elcient_Kyoto_Hachijoguchi-Kyoto_Kyoto_Prefecture_Kinki.html",
     "km": null
    }
   },
@@ -75,18 +75,18 @@
    "chk_out": "2027-05-15",
    "nuits": 4,
    "recommande": {
-    "hotel": "Hotel Gracery Shinjuku",
+    "hotel": "Tokyo Dome Hotel",
     "note10": 8.2,
-    "nuit": 148.0,
-    "total": 592.0,
-    "lien": "https://www.agoda.com/search?textToSearch=Hotel+Gracery+Shinjuku&checkIn=2027-05-11&checkOut=2027-05-15&adults=2&rooms=1&currencyCode=EUR",
+    "nuit": 105.0,
+    "total": 420.0,
+    "lien": "https://www.tripadvisor.com/Hotel_Review-g1066442-d307395-Reviews-Tokyo_Dome_Hotel-Bunkyo_Tokyo_Tokyo_Prefecture_Kanto.html",
     "km": null
    },
    "moins_cher": {
     "hotel": "Hotel Villa Fontaine Grand Haneda Airport",
     "note10": 8.0,
-    "nuit": 100.0,
-    "total": 400.0,
+    "nuit": 98.0,
+    "total": 392.0,
     "lien": "https://www.tripadvisor.com/Hotel_Review-g1066454-d20063612-Reviews-Hotel_Villa_Fontaine_Grand_Haneda_Airport-Ota_Tokyo_Tokyo_Prefecture_Kanto.html",
     "km": null
    }
@@ -99,8 +99,8 @@
    "recommande": {
     "hotel": "Richmond Hotel Narita",
     "note10": 8.6,
-    "nuit": 74.0,
-    "total": 74.0,
+    "nuit": 72.0,
+    "total": 72.0,
     "lien": "https://www.agoda.com/search?textToSearch=Richmond+Hotel+Narita&checkIn=2027-05-15&checkOut=2027-05-16&adults=2&rooms=1&currencyCode=EUR",
     "km": 6.788147781289532
    },
@@ -116,8 +116,8 @@
  ],
  "trajets": 396.99,
  "complet": true,
- "total_recommande": 1458.99,
- "total_moins_cher": 1246.99,
+ "total_recommande": 1323.99,
+ "total_moins_cher": 1230.99,
  "vol": {
   "recherche": "Japon mai 2027",
   "arrivee": "NRT",
@@ -126,5 +126,5 @@
   "jour_retour": "2027-05-16",
   "prix_personne": 831.0
  },
- "total_avec_vols": 2908.99
+ "total_avec_vols": 2892.99
 }
