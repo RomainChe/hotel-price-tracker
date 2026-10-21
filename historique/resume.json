@@ -1,5 +1,5 @@
 {
- "date": "2026-10-20",
+ "date": "2026-10-21",
  "devise": "EUR",
  "voyageurs": 2,
  "etapes": [
@@ -31,11 +31,11 @@
    "chk_out": "2027-05-08",
    "nuits": 3,
    "recommande": {
-    "hotel": "Remm Shin Osaka",
-    "note10": 8.4,
-    "nuit": 64.0,
-    "total": 192.0,
-    "lien": "https://www.agoda.com/search?textToSearch=Remm+Shin+Osaka&checkIn=2027-05-05&checkOut=2027-05-08&adults=2&rooms=1&currencyCode=EUR",
+    "hotel": "Hotel Nikko Osaka",
+    "note10": 8.2,
+    "nuit": 61.0,
+    "total": 183.0,
+    "lien": "https://www.agoda.com/search?textToSearch=Hotel+Nikko+Osaka&checkIn=2027-05-05&checkOut=2027-05-08&adults=2&rooms=1&currencyCode=EUR",
     "km": null
    },
    "moins_cher": {
@@ -53,19 +53,19 @@
    "chk_out": "2027-05-11",
    "nuits": 3,
    "recommande": {
-    "hotel": "Hotel Elcient Kyoto Hachijoguchi",
-    "note10": 8.0,
-    "nuit": 57.0,
-    "total": 171.0,
-    "lien": "https://www.tripadvisor.com/Hotel_Review-g298564-d1114922-Reviews-Hotel_Elcient_Kyoto_Hachijoguchi-Kyoto_Kyoto_Prefecture_Kinki.html",
+    "hotel": "Park Hotel Kyoto Oike",
+    "note10": 9.4,
+    "nuit": 65.0,
+    "total": 195.0,
+    "lien": "https://www.tripadvisor.com/Hotel_Review-g298564-d23101005-Reviews-Park_Hotel_Kyoto_Oike-Kyoto_Kyoto_Prefecture_Kinki.html",
     "km": null
    },
    "moins_cher": {
-    "hotel": "Hotel Elcient Kyoto Hachijoguchi",
-    "note10": 8.0,
-    "nuit": 57.0,
-    "total": 171.0,
-    "lien": "https://www.tripadvisor.com/Hotel_Review-g298564-d1114922-Reviews-Hotel_Elcient_Kyoto_Hachijoguchi-Kyoto_Kyoto_Prefecture_Kinki.html",
+    "hotel": "Park Hotel Kyoto Oike",
+    "note10": 9.4,
+    "nuit": 65.0,
+    "total": 195.0,
+    "lien": "https://www.tripadvisor.com/Hotel_Review-g298564-d23101005-Reviews-Park_Hotel_Kyoto_Oike-Kyoto_Kyoto_Prefecture_Kinki.html",
     "km": null
    }
   },
@@ -75,18 +75,18 @@
    "chk_out": "2027-05-15",
    "nuits": 4,
    "recommande": {
-    "hotel": "Tokyo Dome Hotel",
-    "note10": 8.2,
-    "nuit": 105.0,
-    "total": 420.0,
-    "lien": "https://www.tripadvisor.com/Hotel_Review-g1066442-d307395-Reviews-Tokyo_Dome_Hotel-Bunkyo_Tokyo_Tokyo_Prefecture_Kanto.html",
+    "hotel": "Hotel Villa Fontaine Grand Haneda Airport",
+    "note10": 8.0,
+    "nuit": 97.0,
+    "total": 388.0,
+    "lien": "https://www.tripadvisor.com/Hotel_Review-g1066454-d20063612-Reviews-Hotel_Villa_Fontaine_Grand_Haneda_Airport-Ota_Tokyo_Tokyo_Prefecture_Kanto.html",
     "km": null
    },
    "moins_cher": {
     "hotel": "Hotel Villa Fontaine Grand Haneda Airport",
     "note10": 8.0,
-    "nuit": 98.0,
-    "total": 392.0,
+    "nuit": 97.0,
+    "total": 388.0,
     "lien": "https://www.tripadvisor.com/Hotel_Review-g1066454-d20063612-Reviews-Hotel_Villa_Fontaine_Grand_Haneda_Airport-Ota_Tokyo_Tokyo_Prefecture_Kanto.html",
     "km": null
    }
@@ -99,8 +99,8 @@
    "recommande": {
     "hotel": "Richmond Hotel Narita",
     "note10": 8.6,
-    "nuit": 72.0,
-    "total": 72.0,
+    "nuit": 71.0,
+    "total": 71.0,
     "lien": "https://www.agoda.com/search?textToSearch=Richmond+Hotel+Narita&checkIn=2027-05-15&checkOut=2027-05-16&adults=2&rooms=1&currencyCode=EUR",
     "km": 6.788147781289532
    },
@@ -116,8 +116,8 @@
  ],
  "trajets": 396.99,
  "complet": true,
- "total_recommande": 1323.99,
- "total_moins_cher": 1230.99,
+ "total_recommande": 1305.99,
+ "total_moins_cher": 1250.99,
  "vol": {
   "recherche": "Japon mai 2027",
   "arrivee": "NRT",
@@ -126,5 +126,5 @@
   "jour_retour": "2027-05-16",
   "prix_personne": 831.0
  },
- "total_avec_vols": 2892.99
+ "total_avec_vols": 2912.99
 }
