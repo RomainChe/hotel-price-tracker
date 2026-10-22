@@ -1,5 +1,5 @@
 {
- "date": "2026-10-21",
+ "date": "2026-10-22",
  "devise": "EUR",
  "voyageurs": 2,
  "etapes": [
@@ -31,19 +31,19 @@
    "chk_out": "2027-05-08",
    "nuits": 3,
    "recommande": {
-    "hotel": "Hotel Nikko Osaka",
-    "note10": 8.2,
-    "nuit": 61.0,
-    "total": 183.0,
-    "lien": "https://www.agoda.com/search?textToSearch=Hotel+Nikko+Osaka&checkIn=2027-05-05&checkOut=2027-05-08&adults=2&rooms=1&currencyCode=EUR",
+    "hotel": "Holiday Inn & Suites Shin Osaka by IHG",
+    "note10": 9.2,
+    "nuit": 66.0,
+    "total": 198.0,
+    "lien": "https://www.tripadvisor.com/Hotel_Review-g298566-d14005210-Reviews-Holiday_Inn_Suites_Shin_Osaka_by_IHG-Osaka_Osaka_Prefecture_Kinki.html",
     "km": null
    },
    "moins_cher": {
-    "hotel": "ART HOTEL Osaka Bay Tower",
-    "note10": 8.0,
-    "nuit": 48.0,
-    "total": 144.0,
-    "lien": "https://www.booking.com/searchresults.html?ss=ART+HOTEL+Osaka+Bay+Tower&checkin=2027-05-05&checkout=2027-05-08&group_adults=2&no_rooms=1&selected_currency=EUR",
+    "hotel": "Holiday Inn & Suites Shin Osaka by IHG",
+    "note10": 9.2,
+    "nuit": 66.0,
+    "total": 198.0,
+    "lien": "https://www.tripadvisor.com/Hotel_Review-g298566-d14005210-Reviews-Holiday_Inn_Suites_Shin_Osaka_by_IHG-Osaka_Osaka_Prefecture_Kinki.html",
     "km": null
    }
   },
@@ -53,19 +53,19 @@
    "chk_out": "2027-05-11",
    "nuits": 3,
    "recommande": {
-    "hotel": "Park Hotel Kyoto Oike",
+    "hotel": "Hotel Tou Nishinotoin Kyoto",
     "note10": 9.4,
-    "nuit": 65.0,
-    "total": 195.0,
-    "lien": "https://www.tripadvisor.com/Hotel_Review-g298564-d23101005-Reviews-Park_Hotel_Kyoto_Oike-Kyoto_Kyoto_Prefecture_Kinki.html",
+    "nuit": 103.0,
+    "total": 309.0,
+    "lien": "https://www.agoda.com/search?textToSearch=Hotel+Tou+Nishinotoin+Kyoto&checkIn=2027-05-08&checkOut=2027-05-11&adults=2&rooms=1&currencyCode=EUR",
     "km": null
    },
    "moins_cher": {
-    "hotel": "Park Hotel Kyoto Oike",
-    "note10": 9.4,
-    "nuit": 65.0,
-    "total": 195.0,
-    "lien": "https://www.tripadvisor.com/Hotel_Review-g298564-d23101005-Reviews-Park_Hotel_Kyoto_Oike-Kyoto_Kyoto_Prefecture_Kinki.html",
+    "hotel": "Miyako City Kintetsu Kyoto Station",
+    "note10": 8.2,
+    "nuit": 78.0,
+    "total": 234.0,
+    "lien": "https://www.agoda.com/search?textToSearch=Miyako+City+Kintetsu+Kyoto+Station&checkIn=2027-05-08&checkOut=2027-05-11&adults=2&rooms=1&currencyCode=EUR",
     "km": null
    }
   },
@@ -75,19 +75,19 @@
    "chk_out": "2027-05-15",
    "nuits": 4,
    "recommande": {
-    "hotel": "Hotel Villa Fontaine Grand Haneda Airport",
-    "note10": 8.0,
-    "nuit": 97.0,
-    "total": 388.0,
-    "lien": "https://www.tripadvisor.com/Hotel_Review-g1066454-d20063612-Reviews-Hotel_Villa_Fontaine_Grand_Haneda_Airport-Ota_Tokyo_Tokyo_Prefecture_Kanto.html",
+    "hotel": "The Kanzashi Tokyo Asakusa",
+    "note10": 9.2,
+    "nuit": 85.0,
+    "total": 340.0,
+    "lien": "https://www.agoda.com/search?textToSearch=The+Kanzashi+Tokyo+Asakusa&checkIn=2027-05-11&checkOut=2027-05-15&adults=2&rooms=1&currencyCode=EUR",
     "km": null
    },
    "moins_cher": {
-    "hotel": "Hotel Villa Fontaine Grand Haneda Airport",
-    "note10": 8.0,
-    "nuit": 97.0,
-    "total": 388.0,
-    "lien": "https://www.tripadvisor.com/Hotel_Review-g1066454-d20063612-Reviews-Hotel_Villa_Fontaine_Grand_Haneda_Airport-Ota_Tokyo_Tokyo_Prefecture_Kanto.html",
+    "hotel": "The Kanzashi Tokyo Asakusa",
+    "note10": 9.2,
+    "nuit": 85.0,
+    "total": 340.0,
+    "lien": "https://www.agoda.com/search?textToSearch=The+Kanzashi+Tokyo+Asakusa&checkIn=2027-05-11&checkOut=2027-05-15&adults=2&rooms=1&currencyCode=EUR",
     "km": null
    }
   },
@@ -99,25 +99,25 @@
    "recommande": {
     "hotel": "Richmond Hotel Narita",
     "note10": 8.6,
-    "nuit": 71.0,
-    "total": 71.0,
+    "nuit": 70.0,
+    "total": 70.0,
     "lien": "https://www.agoda.com/search?textToSearch=Richmond+Hotel+Narita&checkIn=2027-05-15&checkOut=2027-05-16&adults=2&rooms=1&currencyCode=EUR",
     "km": 6.788147781289532
    },
    "moins_cher": {
     "hotel": "Hotel Nikko Narita",
     "note10": 8.2,
-    "nuit": 61.0,
-    "total": 61.0,
-    "lien": "https://www.agoda.com/search?textToSearch=Hotel+Nikko+Narita&checkIn=2027-05-15&checkOut=2027-05-16&adults=2&rooms=1&currencyCode=EUR",
+    "nuit": 62.0,
+    "total": 62.0,
+    "lien": "https://www.booking.com/searchresults.html?ss=Hotel+Nikko+Narita&checkin=2027-05-15&checkout=2027-05-16&group_adults=2&no_rooms=1&selected_currency=EUR",
     "km": 1.8063403051013733
    }
   }
  ],
  "trajets": 396.99,
  "complet": true,
- "total_recommande": 1305.99,
- "total_moins_cher": 1250.99,
+ "total_recommande": 1385.99,
+ "total_moins_cher": 1296.99,
  "vol": {
   "recherche": "Japon mai 2027",
   "arrivee": "NRT",
@@ -126,5 +126,5 @@
   "jour_retour": "2027-05-16",
   "prix_personne": 831.0
  },
- "total_avec_vols": 2912.99
+ "total_avec_vols": 2958.99
 }
