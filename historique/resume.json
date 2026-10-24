@@ -1,5 +1,5 @@
 {
- "date": "2026-10-23",
+ "date": "2026-10-24",
  "devise": "EUR",
  "voyageurs": 2,
  "etapes": [
@@ -11,16 +11,16 @@
    "recommande": {
     "hotel": "Richmond Hotel Narita",
     "note10": 8.6,
-    "nuit": 74.0,
-    "total": 74.0,
-    "lien": "https://www.agoda.com/search?textToSearch=Richmond+Hotel+Narita&checkIn=2027-05-04&checkOut=2027-05-05&adults=2&rooms=1&currencyCode=EUR",
+    "nuit": 77.0,
+    "total": 77.0,
+    "lien": "https://www.tripadvisor.com/Hotel_Review-g298161-d1484780-Reviews-Richmond_Hotel_Narita-Narita_Chiba_Prefecture_Kanto.html",
     "km": 6.788147781289532
    },
    "moins_cher": {
     "hotel": "Hotel Nikko Narita",
     "note10": 8.2,
-    "nuit": 67.0,
-    "total": 67.0,
+    "nuit": 68.0,
+    "total": 68.0,
     "lien": "https://www.booking.com/searchresults.html?ss=Hotel+Nikko+Narita&checkin=2027-05-04&checkout=2027-05-05&group_adults=2&no_rooms=1&selected_currency=EUR",
     "km": 1.8063403051013733
    }
@@ -31,19 +31,19 @@
    "chk_out": "2027-05-08",
    "nuits": 3,
    "recommande": {
-    "hotel": "Hotel Universal Port",
-    "note10": 9.0,
-    "nuit": 82.0,
-    "total": 246.0,
-    "lien": "https://www.booking.com/searchresults.html?ss=Hotel+Universal+Port&checkin=2027-05-05&checkout=2027-05-08&group_adults=2&no_rooms=1&selected_currency=EUR",
+    "hotel": "The Bridge Hotel Shinsaibashi",
+    "note10": 9.2,
+    "nuit": 75.0,
+    "total": 225.0,
+    "lien": "https://www.tripadvisor.com/Hotel_Review-g14127623-d11885474-Reviews-The_Bridge_Hotel_Shinsaibashi-Chuo_Osaka_Osaka_Prefecture_Kinki.html",
     "km": null
    },
    "moins_cher": {
-    "hotel": "Hotel Universal Port",
-    "note10": 9.0,
-    "nuit": 82.0,
-    "total": 246.0,
-    "lien": "https://www.booking.com/searchresults.html?ss=Hotel+Universal+Port&checkin=2027-05-05&checkout=2027-05-08&group_adults=2&no_rooms=1&selected_currency=EUR",
+    "hotel": "Hotel Brighton City Osaka Kitahama",
+    "note10": 8.6,
+    "nuit": 52.0,
+    "total": 156.0,
+    "lien": "https://www.agoda.com/search?textToSearch=Hotel+Brighton+City+Osaka+Kitahama&checkIn=2027-05-05&checkOut=2027-05-08&adults=2&rooms=1&currencyCode=EUR",
     "km": null
    }
   },
@@ -53,19 +53,19 @@
    "chk_out": "2027-05-11",
    "nuits": 3,
    "recommande": {
-    "hotel": "Hotel Tou Nishinotoin Kyoto",
-    "note10": 9.4,
-    "nuit": 102.0,
-    "total": 306.0,
-    "lien": "https://www.agoda.com/search?textToSearch=Hotel+Tou+Nishinotoin+Kyoto&checkIn=2027-05-08&checkOut=2027-05-11&adults=2&rooms=1&currencyCode=EUR",
+    "hotel": "Park Hotel Kyoto Oike",
+    "note10": 9.6,
+    "nuit": 65.0,
+    "total": 195.0,
+    "lien": "https://www.tripadvisor.com/Hotel_Review-g298564-d23101005-Reviews-Park_Hotel_Kyoto_Oike-Kyoto_Kyoto_Prefecture_Kinki.html",
     "km": null
    },
    "moins_cher": {
-    "hotel": "Miyako City Kintetsu Kyoto Station",
-    "note10": 8.2,
-    "nuit": 78.0,
-    "total": 234.0,
-    "lien": "https://www.tripadvisor.com/Hotel_Review-g298564-d2222819-Reviews-Miyako_City_Kintetsu_Kyoto_Station-Kyoto_Kyoto_Prefecture_Kinki.html",
+    "hotel": "Park Hotel Kyoto Oike",
+    "note10": 9.6,
+    "nuit": 65.0,
+    "total": 195.0,
+    "lien": "https://www.tripadvisor.com/Hotel_Review-g298564-d23101005-Reviews-Park_Hotel_Kyoto_Oike-Kyoto_Kyoto_Prefecture_Kinki.html",
     "km": null
    }
   },
@@ -75,19 +75,19 @@
    "chk_out": "2027-05-15",
    "nuits": 4,
    "recommande": {
-    "hotel": "Imperial Hotel Tokyo",
-    "note10": 9.2,
-    "nuit": 251.0,
-    "total": 1004.0,
-    "lien": "https://www.agoda.com/search?textToSearch=Imperial+Hotel+Tokyo&checkIn=2027-05-11&checkOut=2027-05-15&adults=2&rooms=1&currencyCode=EUR",
+    "hotel": "Hotel Villa Fontaine Grand Haneda Airport",
+    "note10": 8.0,
+    "nuit": 95.0,
+    "total": 380.0,
+    "lien": "https://www.tripadvisor.com/Hotel_Review-g1066454-d20063612-Reviews-Hotel_Villa_Fontaine_Grand_Haneda_Airport-Ota_Tokyo_Tokyo_Prefecture_Kanto.html",
     "km": null
    },
    "moins_cher": {
-    "hotel": "Daiwa Roynet Hotel Ginza PREMIER Renewal Open March 9th, 2026",
-    "note10": 8.8,
-    "nuit": 172.0,
-    "total": 688.0,
-    "lien": "https://www.agoda.com/search?textToSearch=Daiwa+Roynet+Hotel+Ginza+PREMIER+Renewal+Open+March+9th%2C+2026&checkIn=2027-05-11&checkOut=2027-05-15&adults=2&rooms=1&currencyCode=EUR",
+    "hotel": "Hotel Villa Fontaine Grand Haneda Airport",
+    "note10": 8.0,
+    "nuit": 95.0,
+    "total": 380.0,
+    "lien": "https://www.tripadvisor.com/Hotel_Review-g1066454-d20063612-Reviews-Hotel_Villa_Fontaine_Grand_Haneda_Airport-Ota_Tokyo_Tokyo_Prefecture_Kanto.html",
     "km": null
    }
   },
@@ -116,8 +116,8 @@
  ],
  "trajets": 396.99,
  "complet": true,
- "total_recommande": 2098.99,
- "total_moins_cher": 1694.99,
+ "total_recommande": 1345.99,
+ "total_moins_cher": 1258.99,
  "vol": {
   "recherche": "Japon mai 2027",
   "arrivee": "NRT",
@@ -126,5 +126,5 @@
   "jour_retour": "2027-05-16",
   "prix_personne": 831.0
  },
- "total_avec_vols": 3356.99
+ "total_avec_vols": 2920.99
 }
