@@ -1,5 +1,5 @@
 {
- "date": "2026-10-26",
+ "date": "2026-10-27",
  "devise": "EUR",
  "voyageurs": 2,
  "etapes": [
@@ -19,8 +19,8 @@
    "moins_cher": {
     "hotel": "Hotel Nikko Narita",
     "note10": 8.2,
-    "nuit": 68.0,
-    "total": 68.0,
+    "nuit": 67.0,
+    "total": 67.0,
     "lien": "https://www.booking.com/searchresults.html?ss=Hotel+Nikko+Narita&checkin=2027-05-04&checkout=2027-05-05&group_adults=2&no_rooms=1&selected_currency=EUR",
     "km": 1.8063403051013733
    }
@@ -31,19 +31,19 @@
    "chk_out": "2027-05-08",
    "nuits": 3,
    "recommande": {
-    "hotel": "Hotel Universal Port",
-    "note10": 9.0,
-    "nuit": 83.0,
-    "total": 249.0,
-    "lien": "https://www.booking.com/searchresults.html?ss=Hotel+Universal+Port&checkin=2027-05-05&checkout=2027-05-08&group_adults=2&no_rooms=1&selected_currency=EUR",
+    "hotel": "Holiday Inn & Suites Shin Osaka by IHG",
+    "note10": 9.2,
+    "nuit": 67.0,
+    "total": 201.0,
+    "lien": "https://www.tripadvisor.com/Hotel_Review-g298566-d14005210-Reviews-Holiday_Inn_Suites_Shin_Osaka_by_IHG-Osaka_Osaka_Prefecture_Kinki.html",
     "km": null
    },
    "moins_cher": {
-    "hotel": "Hotel Nikko Osaka",
-    "note10": 8.2,
-    "nuit": 64.0,
-    "total": 192.0,
-    "lien": "https://www.agoda.com/search?textToSearch=Hotel+Nikko+Osaka&checkIn=2027-05-05&checkOut=2027-05-08&adults=2&rooms=1&currencyCode=EUR",
+    "hotel": "Remm Shin Osaka",
+    "note10": 8.4,
+    "nuit": 65.0,
+    "total": 195.0,
+    "lien": "https://www.booking.com/searchresults.html?ss=Remm+Shin+Osaka&checkin=2027-05-05&checkout=2027-05-08&group_adults=2&no_rooms=1&selected_currency=EUR",
     "km": null
    }
   },
@@ -55,16 +55,16 @@
    "recommande": {
     "hotel": "Hotel Tou Nishinotoin Kyoto",
     "note10": 9.4,
-    "nuit": 101.0,
-    "total": 303.0,
+    "nuit": 103.0,
+    "total": 309.0,
     "lien": "https://www.agoda.com/search?textToSearch=Hotel+Tou+Nishinotoin+Kyoto&checkIn=2027-05-08&checkOut=2027-05-11&adults=2&rooms=1&currencyCode=EUR",
     "km": null
    },
    "moins_cher": {
     "hotel": "Miyako City Kintetsu Kyoto Station",
     "note10": 8.2,
-    "nuit": 78.0,
-    "total": 234.0,
+    "nuit": 79.0,
+    "total": 237.0,
     "lien": "https://www.agoda.com/search?textToSearch=Miyako+City+Kintetsu+Kyoto+Station&checkIn=2027-05-08&checkOut=2027-05-11&adults=2&rooms=1&currencyCode=EUR",
     "km": null
    }
@@ -75,19 +75,19 @@
    "chk_out": "2027-05-15",
    "nuits": 4,
    "recommande": {
-    "hotel": "Hotel Sunroute Plaza Shinjuku",
-    "note10": 8.6,
-    "nuit": 167.0,
-    "total": 668.0,
-    "lien": "https://www.agoda.com/search?textToSearch=Hotel+Sunroute+Plaza+Shinjuku&checkIn=2027-05-11&checkOut=2027-05-15&adults=2&rooms=1&currencyCode=EUR",
+    "hotel": "Hotel Villa Fontaine Grand Haneda Airport",
+    "note10": 8.0,
+    "nuit": 102.0,
+    "total": 408.0,
+    "lien": "https://www.booking.com/searchresults.html?ss=Hotel+Villa+Fontaine+Grand+Haneda+Airport&checkin=2027-05-11&checkout=2027-05-15&group_adults=2&no_rooms=1&selected_currency=EUR",
     "km": null
    },
    "moins_cher": {
-    "hotel": "Hotel Gracery Shinjuku",
-    "note10": 8.2,
-    "nuit": 155.0,
-    "total": 620.0,
-    "lien": "https://www.agoda.com/search?textToSearch=Hotel+Gracery+Shinjuku&checkIn=2027-05-11&checkOut=2027-05-15&adults=2&rooms=1&currencyCode=EUR",
+    "hotel": "Hotel Villa Fontaine Grand Haneda Airport",
+    "note10": 8.0,
+    "nuit": 102.0,
+    "total": 408.0,
+    "lien": "https://www.booking.com/searchresults.html?ss=Hotel+Villa+Fontaine+Grand+Haneda+Airport&checkin=2027-05-11&checkout=2027-05-15&group_adults=2&no_rooms=1&selected_currency=EUR",
     "km": null
    }
   },
@@ -116,8 +116,8 @@
  ],
  "trajets": 396.99,
  "complet": true,
- "total_recommande": 1760.99,
- "total_moins_cher": 1573.99,
+ "total_recommande": 1458.99,
+ "total_moins_cher": 1366.99,
  "vol": {
   "recherche": "Japon mai 2027",
   "arrivee": "NRT",
@@ -126,5 +126,5 @@
   "jour_retour": "2027-05-16",
   "prix_personne": 831.0
  },
- "total_avec_vols": 3235.99
+ "total_avec_vols": 3028.99
 }
