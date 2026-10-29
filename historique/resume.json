@@ -1,5 +1,5 @@
 {
- "date": "2026-10-28",
+ "date": "2026-10-29",
  "devise": "EUR",
  "voyageurs": 2,
  "etapes": [
@@ -31,19 +31,19 @@
    "chk_out": "2027-05-08",
    "nuits": 3,
    "recommande": {
-    "hotel": "Fraser Residence Nankai Osaka",
+    "hotel": "Hotel Universal Port Vita",
     "note10": 9.2,
-    "nuit": 97.0,
-    "total": 291.0,
-    "lien": "https://www.tripadvisor.com/Hotel_Review-g298566-d1833741-Reviews-Fraser_Residence_Nankai_Osaka-Osaka_Osaka_Prefecture_Kinki.html",
+    "nuit": 71.0,
+    "total": 213.0,
+    "lien": "https://www.booking.com/searchresults.html?ss=Hotel+Universal+Port+Vita&checkin=2027-05-05&checkout=2027-05-08&group_adults=2&no_rooms=1&selected_currency=EUR",
     "km": null
    },
    "moins_cher": {
-    "hotel": "Holiday Inn & Suites Shin Osaka by IHG",
+    "hotel": "Hotel Universal Port Vita",
     "note10": 9.2,
-    "nuit": 66.0,
-    "total": 198.0,
-    "lien": "https://www.tripadvisor.com/Hotel_Review-g298566-d14005210-Reviews-Holiday_Inn_Suites_Shin_Osaka_by_IHG-Osaka_Osaka_Prefecture_Kinki.html",
+    "nuit": 71.0,
+    "total": 213.0,
+    "lien": "https://www.booking.com/searchresults.html?ss=Hotel+Universal+Port+Vita&checkin=2027-05-05&checkout=2027-05-08&group_adults=2&no_rooms=1&selected_currency=EUR",
     "km": null
    }
   },
@@ -75,19 +75,19 @@
    "chk_out": "2027-05-15",
    "nuits": 4,
    "recommande": {
-    "hotel": "Hotel Villa Fontaine Grand Haneda Airport",
-    "note10": 8.0,
-    "nuit": 100.0,
-    "total": 400.0,
-    "lien": "https://www.tripadvisor.com/Hotel_Review-g1066454-d20063612-Reviews-Hotel_Villa_Fontaine_Grand_Haneda_Airport-Ota_Tokyo_Tokyo_Prefecture_Kanto.html",
+    "hotel": "Via Inn Higashi Ginza",
+    "note10": 8.2,
+    "nuit": 78.0,
+    "total": 312.0,
+    "lien": "https://www.agoda.com/search?textToSearch=Via+Inn+Higashi+Ginza&checkIn=2027-05-11&checkOut=2027-05-15&adults=2&rooms=1&currencyCode=EUR",
     "km": null
    },
    "moins_cher": {
-    "hotel": "Hotel Villa Fontaine Grand Haneda Airport",
-    "note10": 8.0,
-    "nuit": 100.0,
-    "total": 400.0,
-    "lien": "https://www.tripadvisor.com/Hotel_Review-g1066454-d20063612-Reviews-Hotel_Villa_Fontaine_Grand_Haneda_Airport-Ota_Tokyo_Tokyo_Prefecture_Kanto.html",
+    "hotel": "Via Inn Higashi Ginza",
+    "note10": 8.2,
+    "nuit": 78.0,
+    "total": 312.0,
+    "lien": "https://www.agoda.com/search?textToSearch=Via+Inn+Higashi+Ginza&checkIn=2027-05-11&checkOut=2027-05-15&adults=2&rooms=1&currencyCode=EUR",
     "km": null
    }
   },
@@ -116,8 +116,8 @@
  ],
  "trajets": 396.99,
  "complet": true,
- "total_recommande": 1429.99,
- "total_moins_cher": 1322.99,
+ "total_recommande": 1263.99,
+ "total_moins_cher": 1249.99,
  "vol": {
   "recherche": "Japon mai 2027",
   "arrivee": "NRT",
@@ -126,5 +126,5 @@
   "jour_retour": "2027-05-16",
   "prix_personne": 831.0
  },
- "total_avec_vols": 2984.99
+ "total_avec_vols": 2911.99
 }
