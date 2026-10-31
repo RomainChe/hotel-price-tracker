@@ -676,3 +676,41 @@ date,ville,chk_in,chk_out,hotel_key,hotel,rating,reviews,ota,rate,nights,rooms
 2026-10-30,nrt,2027-05-15,2027-05-16,g298161-d6614524,nine hours Narita Airport,4.0,592,Vio.com,85.0,1,1
 2026-10-30,nrt,2027-05-15,2027-05-16,g298161-d584896,Wakamatsu Honten,4.2,154,Booking.com,140.0,1,1
 2026-10-30,nrt,2027-05-15,2027-05-16,g298161-d307183,Hilton Tokyo Narita Airport Hotel,4.0,3140,Booking.com,258.0,1,1
+2026-10-31,nrt,2027-05-04,2027-05-05,g298161-d307188,Hotel Nikko Narita,4.1,4490,Booking.com,67.0,1,1
+2026-10-31,nrt,2027-05-04,2027-05-05,g298161-d1484780,Richmond Hotel Narita,4.3,1550,Trip.com,76.0,1,1
+2026-10-31,nrt,2027-05-04,2027-05-05,g298161-d6614524,nine hours Narita Airport,4.0,592,Vio.com,92.0,1,1
+2026-10-31,nrt,2027-05-04,2027-05-05,g298161-d584896,Wakamatsu Honten,4.2,154,Booking.com,140.0,1,1
+2026-10-31,nrt,2027-05-04,2027-05-05,g298161-d307183,Hilton Tokyo Narita Airport Hotel,4.0,3140,Booking.com,298.0,1,1
+2026-10-31,osaka,2027-05-05,2027-05-08,g298566-d13778849,ART HOTEL Osaka Bay Tower,4.0,147,Booking.com,49.0,3,1
+2026-10-31,osaka,2027-05-05,2027-05-08,g298566-d302313,Hotel Nikko Osaka,4.1,2687,Agoda.com,72.0,3,1
+2026-10-31,osaka,2027-05-05,2027-05-08,g298566-d1426655,Hotel Monterey Grasmere Osaka,4.1,2098,Hotel Website,74.0,3,1
+2026-10-31,osaka,2027-05-05,2027-05-08,g298566-d17338162,Hiyori Hotel Osaka Namba,4.4,115,Vio.com,81.0,3,1
+2026-10-31,osaka,2027-05-05,2027-05-08,g298566-d634620,Hotel Universal Port,4.5,2334,Agoda.com,82.0,3,1
+2026-10-31,osaka,2027-05-05,2027-05-08,g298566-d7806340,The Park Front Hotel at Universal Studios Japan,4.3,1018,Trip.com,83.0,3,1
+2026-10-31,osaka,2027-05-05,2027-05-08,g298566-d17577303,The Lively Osaka Honmachi,4.5,472,Agoda.com,114.0,3,1
+2026-10-31,osaka,2027-05-05,2027-05-08,g298566-d678584,Cross Hotel Osaka,4.4,2024,Booking.com,153.0,3,1
+2026-10-31,osaka,2027-05-05,2027-05-08,g298566-d301569,Swissotel Nankai Osaka,4.4,4837,Agoda.com,214.0,3,1
+2026-10-31,kyoto,2027-05-08,2027-05-11,g298564-d1114922,Hotel Elcient Kyoto Hachijoguchi,4.0,460,Trip.com,58.0,3,1
+2026-10-31,kyoto,2027-05-08,2027-05-11,g298564-d23101005,Park Hotel Kyoto Oike,4.8,185,Vio.com,65.0,3,1
+2026-10-31,kyoto,2027-05-08,2027-05-11,g298564-d2222819,Miyako City Kintetsu Kyoto Station,4.1,894,Vio.com,70.0,3,1
+2026-10-31,kyoto,2027-05-08,2027-05-11,g298564-d16714910,Hotel Vischio Kyoto by Granvia,4.4,248,Agoda.com,98.0,3,1
+2026-10-31,kyoto,2027-05-08,2027-05-11,g298564-d307683,Rihga Royal Hotel Kyoto,4.0,2201,Trip.com,101.0,3,1
+2026-10-31,kyoto,2027-05-08,2027-05-11,g298564-d21291794,Hotel Tou Nishinotoin Kyoto,4.7,731,Vio.com,102.0,3,1
+2026-10-31,kyoto,2027-05-08,2027-05-11,g298564-d12225052,Solaria Nishitetsu Hotel Kyoto Premier Sanjo Kamogawa,4.6,562,Agoda.com,116.0,3,1
+2026-10-31,kyoto,2027-05-08,2027-05-11,g298564-d1071189,Hotel Granvia Kyoto,4.4,3840,Agoda.com,150.0,3,1
+2026-10-31,kyoto,2027-05-08,2027-05-11,g298564-d15194272,Cross Hotel Kyoto,4.7,733,Agoda.com,171.0,3,1
+2026-10-31,kyoto,2027-05-08,2027-05-11,g298564-d20356402,THE GATE HOTEL KYOTO TAKASEGAWA by HULIC,4.6,209,Trip.com,245.0,3,1
+2026-10-31,tokyo,2027-05-11,2027-05-15,g298184-d307351,Hotel Metropolitan Edmont Tokyo,4.2,780,Trip.com,105.0,4,1
+2026-10-31,tokyo,2027-05-11,2027-05-15,g298184-d658576,Sotetsu Fresa Inn Higashi Shinjuku,4.0,1355,Trip.com,119.0,4,1
+2026-10-31,tokyo,2027-05-11,2027-05-15,g298184-d302435,Imperial Hotel Tokyo,4.6,2833,Vio.com,236.0,4,1
+2026-10-31,tokyo,2027-05-11,2027-05-15,g298184-d307399,Marunouchi Hotel,4.1,650,Agoda.com,276.0,4,1
+2026-10-31,tokyo,2027-05-11,2027-05-15,g298184-d3676666,Hotel New Otani Tokyo Garden Tower,4.2,1519,Trip.com,287.0,4,1
+2026-10-31,tokyo,2027-05-11,2027-05-15,g298184-d653033,HOTEL METROPOLITAN TOKYO MARUNOUCHI,4.3,1405,Trip.com,305.0,4,1
+2026-10-31,tokyo,2027-05-11,2027-05-15,g298184-d14917451,The Gate Hotel Tokyo by Hulic,4.5,355,Trip.com,307.0,4,1
+2026-10-31,tokyo,2027-05-11,2027-05-15,g298184-d300459,ANA InterContinental Tokyo by IHG,4.2,3895,Vio.com,322.0,4,1
+2026-10-31,tokyo,2027-05-11,2027-05-15,g298184-d310308,The Tokyo Station Hotel,4.7,2075,Trip.com,516.0,4,1
+2026-10-31,nrt,2027-05-15,2027-05-16,g298161-d307188,Hotel Nikko Narita,4.1,4490,Booking.com,63.0,1,1
+2026-10-31,nrt,2027-05-15,2027-05-16,g298161-d1484780,Richmond Hotel Narita,4.3,1550,Trip.com,76.0,1,1
+2026-10-31,nrt,2027-05-15,2027-05-16,g298161-d6614524,nine hours Narita Airport,4.0,592,Vio.com,85.0,1,1
+2026-10-31,nrt,2027-05-15,2027-05-16,g298161-d584896,Wakamatsu Honten,4.2,154,Booking.com,140.0,1,1
+2026-10-31,nrt,2027-05-15,2027-05-16,g298161-d307183,Hilton Tokyo Narita Airport Hotel,4.0,3140,Booking.com,253.0,1,1

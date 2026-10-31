@@ -1,5 +1,5 @@
 {
- "date": "2026-10-30",
+ "date": "2026-10-31",
  "devise": "EUR",
  "voyageurs": 2,
  "etapes": [
@@ -31,19 +31,19 @@
    "chk_out": "2027-05-08",
    "nuits": 3,
    "recommande": {
-    "hotel": "Hotel Universal Port",
-    "note10": 9.0,
-    "nuit": 82.0,
-    "total": 246.0,
-    "lien": "https://www.booking.com/searchresults.html?ss=Hotel+Universal+Port&checkin=2027-05-05&checkout=2027-05-08&group_adults=2&no_rooms=1&selected_currency=EUR",
+    "hotel": "Hotel Nikko Osaka",
+    "note10": 8.2,
+    "nuit": 72.0,
+    "total": 216.0,
+    "lien": "https://www.agoda.com/search?textToSearch=Hotel+Nikko+Osaka&checkIn=2027-05-05&checkOut=2027-05-08&adults=2&rooms=1&currencyCode=EUR",
     "km": null
    },
    "moins_cher": {
-    "hotel": "Hotel Monterey Grasmere Osaka",
-    "note10": 8.2,
-    "nuit": 74.0,
-    "total": 222.0,
-    "lien": "https://www.tripadvisor.com/Hotel_Review-g298566-d1426655-Reviews-Hotel_Monterey_Grasmere_Osaka-Osaka_Osaka_Prefecture_Kinki.html",
+    "hotel": "ART HOTEL Osaka Bay Tower",
+    "note10": 8.0,
+    "nuit": 49.0,
+    "total": 147.0,
+    "lien": "https://www.booking.com/searchresults.html?ss=ART+HOTEL+Osaka+Bay+Tower&checkin=2027-05-05&checkout=2027-05-08&group_adults=2&no_rooms=1&selected_currency=EUR",
     "km": null
    }
   },
@@ -61,11 +61,11 @@
     "km": null
    },
    "moins_cher": {
-    "hotel": "Park Hotel Kyoto Oike",
-    "note10": 9.6,
-    "nuit": 65.0,
-    "total": 195.0,
-    "lien": "https://www.tripadvisor.com/Hotel_Review-g298564-d23101005-Reviews-Park_Hotel_Kyoto_Oike-Kyoto_Kyoto_Prefecture_Kinki.html",
+    "hotel": "Hotel Elcient Kyoto Hachijoguchi",
+    "note10": 8.0,
+    "nuit": 58.0,
+    "total": 174.0,
+    "lien": "https://www.tripadvisor.com/Hotel_Review-g298564-d1114922-Reviews-Hotel_Elcient_Kyoto_Hachijoguchi-Kyoto_Kyoto_Prefecture_Kinki.html",
     "km": null
    }
   },
@@ -75,19 +75,19 @@
    "chk_out": "2027-05-15",
    "nuits": 4,
    "recommande": {
-    "hotel": "Hotel Sunroute Plaza Shinjuku",
-    "note10": 8.6,
-    "nuit": 132.0,
-    "total": 528.0,
-    "lien": "https://www.agoda.com/search?textToSearch=Hotel+Sunroute+Plaza+Shinjuku&checkIn=2027-05-11&checkOut=2027-05-15&adults=2&rooms=1&currencyCode=EUR",
+    "hotel": "Hotel Metropolitan Edmont Tokyo",
+    "note10": 8.4,
+    "nuit": 105.0,
+    "total": 420.0,
+    "lien": "https://www.tripadvisor.com/Hotel_Review-g1066443-d307351-Reviews-Hotel_Metropolitan_Edmont_Tokyo-Chiyoda_Tokyo_Tokyo_Prefecture_Kanto.html",
     "km": null
    },
    "moins_cher": {
-    "hotel": "Hotel Villa Fontaine Grand Haneda Airport",
-    "note10": 8.0,
-    "nuit": 101.0,
-    "total": 404.0,
-    "lien": "https://www.tripadvisor.com/Hotel_Review-g1066454-d20063612-Reviews-Hotel_Villa_Fontaine_Grand_Haneda_Airport-Ota_Tokyo_Tokyo_Prefecture_Kanto.html",
+    "hotel": "Hotel Metropolitan Edmont Tokyo",
+    "note10": 8.4,
+    "nuit": 105.0,
+    "total": 420.0,
+    "lien": "https://www.tripadvisor.com/Hotel_Review-g1066443-d307351-Reviews-Hotel_Metropolitan_Edmont_Tokyo-Chiyoda_Tokyo_Tokyo_Prefecture_Kanto.html",
     "km": null
    }
   },
@@ -99,9 +99,9 @@
    "recommande": {
     "hotel": "Richmond Hotel Narita",
     "note10": 8.6,
-    "nuit": 71.0,
-    "total": 71.0,
-    "lien": "https://www.agoda.com/search?textToSearch=Richmond+Hotel+Narita&checkIn=2027-05-15&checkOut=2027-05-16&adults=2&rooms=1&currencyCode=EUR",
+    "nuit": 76.0,
+    "total": 76.0,
+    "lien": "https://www.tripadvisor.com/Hotel_Review-g298161-d1484780-Reviews-Richmond_Hotel_Narita-Narita_Chiba_Prefecture_Kanto.html",
     "km": 6.788147781289532
    },
    "moins_cher": {
@@ -116,8 +116,8 @@
  ],
  "trajets": 396.99,
  "complet": true,
- "total_recommande": 1512.99,
- "total_moins_cher": 1347.99,
+ "total_recommande": 1379.99,
+ "total_moins_cher": 1267.99,
  "vol": {
   "recherche": "Japon mai 2027",
   "arrivee": "NRT",
@@ -126,5 +126,5 @@
   "jour_retour": "2027-05-16",
   "prix_personne": 831.0
  },
- "total_avec_vols": 3009.99
+ "total_avec_vols": 2929.99
 }
