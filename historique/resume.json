@@ -1,60 +1,130 @@
 {
- "date": "2026-11-06",
+ "date": "2026-11-07",
  "devise": "EUR",
  "voyageurs": 2,
  "etapes": [
   {
-   "ville": "hnd",
-   "chk_in": "2027-05-23",
-   "chk_out": "2027-05-24",
+   "ville": "nrt",
+   "chk_in": "2027-05-04",
+   "chk_out": "2027-05-05",
    "nuits": 1,
-   "recommande": null,
-   "moins_cher": null
+   "recommande": {
+    "hotel": "Richmond Hotel Narita",
+    "note10": 8.6,
+    "nuit": 70.0,
+    "total": 70.0,
+    "lien": "https://www.agoda.com/search?textToSearch=Richmond+Hotel+Narita&checkIn=2027-05-04&checkOut=2027-05-05&adults=2&rooms=1&currencyCode=EUR",
+    "km": 6.788147781289532
+   },
+   "moins_cher": {
+    "hotel": "Hotel Nikko Narita",
+    "note10": 8.2,
+    "nuit": 67.0,
+    "total": 67.0,
+    "lien": "https://www.booking.com/searchresults.html?ss=Hotel+Nikko+Narita&checkin=2027-05-04&checkout=2027-05-05&group_adults=2&no_rooms=1&selected_currency=EUR",
+    "km": 1.8063403051013733
+   }
   },
   {
    "ville": "osaka",
-   "chk_in": "2027-05-24",
-   "chk_out": "2027-05-31",
-   "nuits": 7,
-   "recommande": null,
-   "moins_cher": null
+   "chk_in": "2027-05-05",
+   "chk_out": "2027-05-08",
+   "nuits": 3,
+   "recommande": {
+    "hotel": "Hotel Universal Port",
+    "note10": 9.0,
+    "nuit": 82.0,
+    "total": 246.0,
+    "lien": "https://www.booking.com/searchresults.html?ss=Hotel+Universal+Port&checkin=2027-05-05&checkout=2027-05-08&group_adults=2&no_rooms=1&selected_currency=EUR",
+    "km": null
+   },
+   "moins_cher": {
+    "hotel": "Hotel Universal Port",
+    "note10": 9.0,
+    "nuit": 82.0,
+    "total": 246.0,
+    "lien": "https://www.booking.com/searchresults.html?ss=Hotel+Universal+Port&checkin=2027-05-05&checkout=2027-05-08&group_adults=2&no_rooms=1&selected_currency=EUR",
+    "km": null
+   }
   },
   {
    "ville": "kyoto",
-   "chk_in": "2027-05-31",
-   "chk_out": "2027-06-04",
-   "nuits": 4,
-   "recommande": null,
-   "moins_cher": null
+   "chk_in": "2027-05-08",
+   "chk_out": "2027-05-11",
+   "nuits": 3,
+   "recommande": {
+    "hotel": "Park Hotel Kyoto Oike",
+    "note10": 9.6,
+    "nuit": 79.0,
+    "total": 237.0,
+    "lien": "https://www.tripadvisor.com/Hotel_Review-g298564-d23101005-Reviews-Park_Hotel_Kyoto_Oike-Kyoto_Kyoto_Prefecture_Kinki.html",
+    "km": null
+   },
+   "moins_cher": {
+    "hotel": "Hotel Elcient Kyoto Hachijoguchi",
+    "note10": 8.0,
+    "nuit": 57.0,
+    "total": 171.0,
+    "lien": "https://www.tripadvisor.com/Hotel_Review-g298564-d1114922-Reviews-Hotel_Elcient_Kyoto_Hachijoguchi-Kyoto_Kyoto_Prefecture_Kinki.html",
+    "km": null
+   }
   },
   {
    "ville": "tokyo",
-   "chk_in": "2027-06-04",
-   "chk_out": "2027-06-12",
-   "nuits": 8,
-   "recommande": null,
-   "moins_cher": null
+   "chk_in": "2027-05-11",
+   "chk_out": "2027-05-15",
+   "nuits": 4,
+   "recommande": {
+    "hotel": "Hotel Sunroute Plaza Shinjuku",
+    "note10": 8.6,
+    "nuit": 135.0,
+    "total": 540.0,
+    "lien": "https://www.agoda.com/search?textToSearch=Hotel+Sunroute+Plaza+Shinjuku&checkIn=2027-05-11&checkOut=2027-05-15&adults=2&rooms=1&currencyCode=EUR",
+    "km": null
+   },
+   "moins_cher": {
+    "hotel": "Sotetsu Fresa Inn Higashi Shinjuku",
+    "note10": 8.0,
+    "nuit": 120.0,
+    "total": 480.0,
+    "lien": "https://www.tripadvisor.com/Hotel_Review-g1066457-d658576-Reviews-Sotetsu_Fresa_Inn_Higashi_Shinjuku-Shinjuku_Tokyo_Tokyo_Prefecture_Kanto.html",
+    "km": null
+   }
   },
   {
-   "ville": "hnd",
-   "chk_in": "2027-06-12",
-   "chk_out": "2027-06-13",
+   "ville": "nrt",
+   "chk_in": "2027-05-15",
+   "chk_out": "2027-05-16",
    "nuits": 1,
-   "recommande": null,
-   "moins_cher": null
+   "recommande": {
+    "hotel": "Richmond Hotel Narita",
+    "note10": 8.6,
+    "nuit": 76.0,
+    "total": 76.0,
+    "lien": "https://www.tripadvisor.com/Hotel_Review-g298161-d1484780-Reviews-Richmond_Hotel_Narita-Narita_Chiba_Prefecture_Kanto.html",
+    "km": 6.788147781289532
+   },
+   "moins_cher": {
+    "hotel": "Hotel Nikko Narita",
+    "note10": 8.2,
+    "nuit": 63.0,
+    "total": 63.0,
+    "lien": "https://www.booking.com/searchresults.html?ss=Hotel+Nikko+Narita&checkin=2027-05-15&checkout=2027-05-16&group_adults=2&no_rooms=1&selected_currency=EUR",
+    "km": 1.8063403051013733
+   }
   }
  ],
- "trajets": 365.63,
- "complet": false,
- "total_recommande": 365.63,
- "total_moins_cher": 365.63,
+ "trajets": 396.99,
+ "complet": true,
+ "total_recommande": 1565.99,
+ "total_moins_cher": 1423.99,
  "vol": {
   "recherche": "Japon mai 2027",
-  "arrivee": "HND",
-  "depart": "HND",
-  "jour_aller": "2027-05-22",
-  "jour_retour": "2027-06-13",
-  "prix_personne": 769.0
+  "arrivee": "NRT",
+  "depart": "NRT",
+  "jour_aller": "2027-05-03",
+  "jour_retour": "2027-05-16",
+  "prix_personne": 831.0
  },
- "total_avec_vols": 1903.63
+ "total_avec_vols": 3085.99
 }
