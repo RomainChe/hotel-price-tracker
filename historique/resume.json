@@ -1,5 +1,5 @@
 {
- "date": "2026-11-11",
+ "date": "2026-11-12",
  "devise": "EUR",
  "voyageurs": 2,
  "etapes": [
@@ -31,19 +31,19 @@
    "chk_out": "2027-05-08",
    "nuits": 3,
    "recommande": {
-    "hotel": "Hearton Hotel Kita Umeda",
-    "note10": 8.0,
-    "nuit": 44.0,
-    "total": 132.0,
-    "lien": "https://www.agoda.com/search?textToSearch=Hearton+Hotel+Kita+Umeda&checkIn=2027-05-05&checkOut=2027-05-08&adults=2&rooms=1&currencyCode=EUR",
+    "hotel": "Hotel Sun Plaza",
+    "note10": 8.8,
+    "nuit": 29.0,
+    "total": 87.0,
+    "lien": "https://www.booking.com/searchresults.html?ss=Hotel+Sun+Plaza&checkin=2027-05-05&checkout=2027-05-08&group_adults=2&no_rooms=1&selected_currency=EUR",
     "km": null
    },
    "moins_cher": {
-    "hotel": "Hearton Hotel Kita Umeda",
-    "note10": 8.0,
-    "nuit": 44.0,
-    "total": 132.0,
-    "lien": "https://www.agoda.com/search?textToSearch=Hearton+Hotel+Kita+Umeda&checkIn=2027-05-05&checkOut=2027-05-08&adults=2&rooms=1&currencyCode=EUR",
+    "hotel": "Hotel Sun Plaza",
+    "note10": 8.8,
+    "nuit": 29.0,
+    "total": 87.0,
+    "lien": "https://www.booking.com/searchresults.html?ss=Hotel+Sun+Plaza&checkin=2027-05-05&checkout=2027-05-08&group_adults=2&no_rooms=1&selected_currency=EUR",
     "km": null
    }
   },
@@ -61,11 +61,11 @@
     "km": null
    },
    "moins_cher": {
-    "hotel": "Park Hotel Kyoto Oike",
-    "note10": 9.6,
-    "nuit": 71.0,
-    "total": 213.0,
-    "lien": "https://www.tripadvisor.com/Hotel_Review-g298564-d23101005-Reviews-Park_Hotel_Kyoto_Oike-Kyoto_Kyoto_Prefecture_Kinki.html",
+    "hotel": "Hotel Elcient Kyoto Hachijoguchi",
+    "note10": 8.0,
+    "nuit": 54.0,
+    "total": 162.0,
+    "lien": "https://www.booking.com/searchresults.html?ss=Hotel+Elcient+Kyoto+Hachijoguchi&checkin=2027-05-08&checkout=2027-05-11&group_adults=2&no_rooms=1&selected_currency=EUR",
     "km": null
    }
   },
@@ -75,19 +75,19 @@
    "chk_out": "2027-05-15",
    "nuits": 4,
    "recommande": {
-    "hotel": "The Kanzashi Tokyo Asakusa",
-    "note10": 9.2,
+    "hotel": "Remm Roppongi",
+    "note10": 8.4,
     "nuit": 86.0,
     "total": 344.0,
-    "lien": "https://www.agoda.com/search?textToSearch=The+Kanzashi+Tokyo+Asakusa&checkIn=2027-05-11&checkOut=2027-05-15&adults=2&rooms=1&currencyCode=EUR",
+    "lien": "https://www.agoda.com/search?textToSearch=Remm+Roppongi&checkIn=2027-05-11&checkOut=2027-05-15&adults=2&rooms=1&currencyCode=EUR",
     "km": null
    },
    "moins_cher": {
-    "hotel": "Via Inn Higashi Ginza",
-    "note10": 8.2,
-    "nuit": 84.0,
-    "total": 336.0,
-    "lien": "https://www.agoda.com/search?textToSearch=Via+Inn+Higashi+Ginza&checkIn=2027-05-11&checkOut=2027-05-15&adults=2&rooms=1&currencyCode=EUR",
+    "hotel": "Remm Roppongi",
+    "note10": 8.4,
+    "nuit": 86.0,
+    "total": 344.0,
+    "lien": "https://www.agoda.com/search?textToSearch=Remm+Roppongi&checkIn=2027-05-11&checkOut=2027-05-15&adults=2&rooms=1&currencyCode=EUR",
     "km": null
    }
   },
@@ -116,8 +116,8 @@
  ],
  "trajets": 396.99,
  "complet": true,
- "total_recommande": 1222.99,
- "total_moins_cher": 1206.99,
+ "total_recommande": 1177.99,
+ "total_moins_cher": 1118.99,
  "vol": {
   "recherche": "Japon mai 2027",
   "arrivee": "NRT",
@@ -126,5 +126,5 @@
   "jour_retour": "2027-05-16",
   "prix_personne": 831.0
  },
- "total_avec_vols": 2868.99
+ "total_avec_vols": 2780.99
 }
