@@ -1,5 +1,5 @@
 {
- "date": "2026-11-12",
+ "date": "2026-11-13",
  "devise": "EUR",
  "voyageurs": 2,
  "etapes": [
@@ -75,19 +75,19 @@
    "chk_out": "2027-05-15",
    "nuits": 4,
    "recommande": {
-    "hotel": "Remm Roppongi",
-    "note10": 8.4,
-    "nuit": 86.0,
-    "total": 344.0,
-    "lien": "https://www.agoda.com/search?textToSearch=Remm+Roppongi&checkIn=2027-05-11&checkOut=2027-05-15&adults=2&rooms=1&currencyCode=EUR",
+    "hotel": "Hotel Sunroute Plaza Shinjuku",
+    "note10": 8.6,
+    "nuit": 155.0,
+    "total": 620.0,
+    "lien": "https://www.tripadvisor.com/Hotel_Review-g14133713-d320581-Reviews-Hotel_Sunroute_Plaza_Shinjuku-Yoyogi_Shibuya_Tokyo_Tokyo_Prefecture_Kanto.html",
     "km": null
    },
    "moins_cher": {
-    "hotel": "Remm Roppongi",
-    "note10": 8.4,
-    "nuit": 86.0,
-    "total": 344.0,
-    "lien": "https://www.agoda.com/search?textToSearch=Remm+Roppongi&checkIn=2027-05-11&checkOut=2027-05-15&adults=2&rooms=1&currencyCode=EUR",
+    "hotel": "Sotetsu Fresa Inn Higashi Shinjuku",
+    "note10": 8.0,
+    "nuit": 109.0,
+    "total": 436.0,
+    "lien": "https://www.agoda.com/search?textToSearch=Sotetsu+Fresa+Inn+Higashi+Shinjuku&checkIn=2027-05-11&checkOut=2027-05-15&adults=2&rooms=1&currencyCode=EUR",
     "km": null
    }
   },
@@ -99,25 +99,25 @@
    "recommande": {
     "hotel": "Richmond Hotel Narita",
     "note10": 8.6,
-    "nuit": 73.0,
-    "total": 73.0,
-    "lien": "https://www.booking.com/searchresults.html?ss=Richmond+Hotel+Narita&checkin=2027-05-15&checkout=2027-05-16&group_adults=2&no_rooms=1&selected_currency=EUR",
+    "nuit": 71.0,
+    "total": 71.0,
+    "lien": "https://www.agoda.com/search?textToSearch=Richmond+Hotel+Narita&checkIn=2027-05-15&checkOut=2027-05-16&adults=2&rooms=1&currencyCode=EUR",
     "km": 6.788147781289532
    },
    "moins_cher": {
     "hotel": "Hotel Nikko Narita",
     "note10": 8.2,
-    "nuit": 65.0,
-    "total": 65.0,
-    "lien": "https://www.booking.com/searchresults.html?ss=Hotel+Nikko+Narita&checkin=2027-05-15&checkout=2027-05-16&group_adults=2&no_rooms=1&selected_currency=EUR",
+    "nuit": 63.0,
+    "total": 63.0,
+    "lien": "https://www.tripadvisor.com/Hotel_Review-g298161-d307188-Reviews-Hotel_Nikko_Narita-Narita_Chiba_Prefecture_Kanto.html",
     "km": 1.8063403051013733
    }
   }
  ],
  "trajets": 396.99,
  "complet": true,
- "total_recommande": 1177.99,
- "total_moins_cher": 1118.99,
+ "total_recommande": 1451.99,
+ "total_moins_cher": 1208.99,
  "vol": {
   "recherche": "Japon mai 2027",
   "arrivee": "NRT",
@@ -126,5 +126,5 @@
   "jour_retour": "2027-05-16",
   "prix_personne": 831.0
  },
- "total_avec_vols": 2780.99
+ "total_avec_vols": 2870.99
 }
