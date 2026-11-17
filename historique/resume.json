@@ -1,5 +1,5 @@
 {
- "date": "2026-11-16",
+ "date": "2026-11-17",
  "devise": "EUR",
  "voyageurs": 2,
  "etapes": [
@@ -11,16 +11,16 @@
    "recommande": {
     "hotel": "Richmond Hotel Narita",
     "note10": 8.6,
-    "nuit": 66.0,
-    "total": 66.0,
+    "nuit": 64.0,
+    "total": 64.0,
     "lien": "https://www.agoda.com/search?textToSearch=Richmond+Hotel+Narita&checkIn=2027-05-04&checkOut=2027-05-05&adults=2&rooms=1&currencyCode=EUR",
     "km": 6.788147781289532
    },
    "moins_cher": {
     "hotel": "Richmond Hotel Narita",
     "note10": 8.6,
-    "nuit": 66.0,
-    "total": 66.0,
+    "nuit": 64.0,
+    "total": 64.0,
     "lien": "https://www.agoda.com/search?textToSearch=Richmond+Hotel+Narita&checkIn=2027-05-04&checkOut=2027-05-05&adults=2&rooms=1&currencyCode=EUR",
     "km": 6.788147781289532
    }
@@ -31,19 +31,19 @@
    "chk_out": "2027-05-08",
    "nuits": 3,
    "recommande": {
-    "hotel": "Hotel Sun Plaza",
-    "note10": 8.8,
-    "nuit": 29.0,
-    "total": 87.0,
-    "lien": "https://www.booking.com/searchresults.html?ss=Hotel+Sun+Plaza&checkin=2027-05-05&checkout=2027-05-08&group_adults=2&no_rooms=1&selected_currency=EUR",
+    "hotel": "Hotel Universal Port Vita",
+    "note10": 9.2,
+    "nuit": 78.0,
+    "total": 234.0,
+    "lien": "https://www.booking.com/searchresults.html?ss=Hotel+Universal+Port+Vita&checkin=2027-05-05&checkout=2027-05-08&group_adults=2&no_rooms=1&selected_currency=EUR",
     "km": null
    },
    "moins_cher": {
-    "hotel": "Hotel Sun Plaza",
-    "note10": 8.8,
-    "nuit": 29.0,
-    "total": 87.0,
-    "lien": "https://www.booking.com/searchresults.html?ss=Hotel+Sun+Plaza&checkin=2027-05-05&checkout=2027-05-08&group_adults=2&no_rooms=1&selected_currency=EUR",
+    "hotel": "Hotel Brighton City Osaka Kitahama",
+    "note10": 8.6,
+    "nuit": 52.0,
+    "total": 156.0,
+    "lien": "https://www.tripadvisor.com/Hotel_Review-g14127623-d1094561-Reviews-Hotel_Brighton_City_Osaka_Kitahama-Chuo_Osaka_Osaka_Prefecture_Kinki.html",
     "km": null
    }
   },
@@ -53,19 +53,19 @@
    "chk_out": "2027-05-11",
    "nuits": 3,
    "recommande": {
-    "hotel": "Piece Hostel Sanjo",
-    "note10": 9.6,
-    "nuit": 44.0,
-    "total": 132.0,
-    "lien": "https://www.booking.com/searchresults.html?ss=Piece+Hostel+Sanjo&checkin=2027-05-08&checkout=2027-05-11&group_adults=2&no_rooms=1&selected_currency=EUR",
+    "hotel": "Hotel Vischio Kyoto by Granvia",
+    "note10": 8.8,
+    "nuit": 71.0,
+    "total": 213.0,
+    "lien": "https://www.agoda.com/search?textToSearch=Hotel+Vischio+Kyoto+by+Granvia&checkIn=2027-05-08&checkOut=2027-05-11&adults=2&rooms=1&currencyCode=EUR",
     "km": null
    },
    "moins_cher": {
-    "hotel": "Piece Hostel Sanjo",
-    "note10": 9.6,
-    "nuit": 44.0,
-    "total": 132.0,
-    "lien": "https://www.booking.com/searchresults.html?ss=Piece+Hostel+Sanjo&checkin=2027-05-08&checkout=2027-05-11&group_adults=2&no_rooms=1&selected_currency=EUR",
+    "hotel": "Hotel Elcient Kyoto Hachijoguchi",
+    "note10": 8.0,
+    "nuit": 56.0,
+    "total": 168.0,
+    "lien": "https://www.tripadvisor.com/Hotel_Review-g298564-d1114922-Reviews-Hotel_Elcient_Kyoto_Hachijoguchi-Kyoto_Kyoto_Prefecture_Kinki.html",
     "km": null
    }
   },
@@ -77,16 +77,16 @@
    "recommande": {
     "hotel": "Hotel Sunroute Plaza Shinjuku",
     "note10": 8.6,
-    "nuit": 152.0,
-    "total": 608.0,
-    "lien": "https://www.tripadvisor.com/Hotel_Review-g14133713-d320581-Reviews-Hotel_Sunroute_Plaza_Shinjuku-Yoyogi_Shibuya_Tokyo_Tokyo_Prefecture_Kanto.html",
+    "nuit": 134.0,
+    "total": 536.0,
+    "lien": "https://www.agoda.com/search?textToSearch=Hotel+Sunroute+Plaza+Shinjuku&checkIn=2027-05-11&checkOut=2027-05-15&adults=2&rooms=1&currencyCode=EUR",
     "km": null
    },
    "moins_cher": {
     "hotel": "Tokyo Dome Hotel",
     "note10": 8.2,
-    "nuit": 109.0,
-    "total": 436.0,
+    "nuit": 103.0,
+    "total": 412.0,
     "lien": "https://www.tripadvisor.com/Hotel_Review-g1066442-d307395-Reviews-Tokyo_Dome_Hotel-Bunkyo_Tokyo_Tokyo_Prefecture_Kanto.html",
     "km": null
    }
@@ -101,7 +101,7 @@
     "note10": 8.6,
     "nuit": 71.0,
     "total": 71.0,
-    "lien": "https://www.booking.com/searchresults.html?ss=Richmond+Hotel+Narita&checkin=2027-05-15&checkout=2027-05-16&group_adults=2&no_rooms=1&selected_currency=EUR",
+    "lien": "https://www.agoda.com/search?textToSearch=Richmond+Hotel+Narita&checkIn=2027-05-15&checkOut=2027-05-16&adults=2&rooms=1&currencyCode=EUR",
     "km": 6.788147781289532
    },
    "moins_cher": {
@@ -116,8 +116,8 @@
  ],
  "trajets": 396.99,
  "complet": true,
- "total_recommande": 1360.99,
- "total_moins_cher": 1182.99,
+ "total_recommande": 1514.99,
+ "total_moins_cher": 1261.99,
  "vol": {
   "recherche": "Japon mai 2027",
   "arrivee": "NRT",
@@ -126,5 +126,5 @@
   "jour_retour": "2027-05-16",
   "prix_personne": 831.0
  },
- "total_avec_vols": 2844.99
+ "total_avec_vols": 2923.99
 }
