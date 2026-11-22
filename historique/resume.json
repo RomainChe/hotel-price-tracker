@@ -1,5 +1,5 @@
 {
- "date": "2026-11-21",
+ "date": "2026-11-22",
  "devise": "EUR",
  "voyageurs": 2,
  "etapes": [
@@ -11,9 +11,9 @@
    "recommande": {
     "hotel": "Richmond Hotel Narita",
     "note10": 8.6,
-    "nuit": 71.0,
-    "total": 71.0,
-    "lien": "https://www.booking.com/searchresults.html?ss=Richmond+Hotel+Narita&checkin=2027-05-04&checkout=2027-05-05&group_adults=2&no_rooms=1&selected_currency=EUR",
+    "nuit": 66.0,
+    "total": 66.0,
+    "lien": "https://www.agoda.com/search?textToSearch=Richmond+Hotel+Narita&checkIn=2027-05-04&checkOut=2027-05-05&adults=2&rooms=1&currencyCode=EUR",
     "km": 6.788147781289532
    },
    "moins_cher": {
@@ -31,19 +31,19 @@
    "chk_out": "2027-05-08",
    "nuits": 3,
    "recommande": {
-    "hotel": "Hotel Universal Port",
+    "hotel": "The Lively Osaka Honmachi",
     "note10": 9.0,
-    "nuit": 83.0,
-    "total": 249.0,
-    "lien": "https://www.booking.com/searchresults.html?ss=Hotel+Universal+Port&checkin=2027-05-05&checkout=2027-05-08&group_adults=2&no_rooms=1&selected_currency=EUR",
+    "nuit": 78.0,
+    "total": 234.0,
+    "lien": "https://www.tripadvisor.com/Hotel_Review-g14127623-d17577303-Reviews-The_Lively_Osaka_Honmachi-Chuo_Osaka_Osaka_Prefecture_Kinki.html",
     "km": null
    },
    "moins_cher": {
-    "hotel": "Hotel Monterey Grasmere Osaka",
-    "note10": 8.2,
-    "nuit": 71.0,
-    "total": 213.0,
-    "lien": "https://www.agoda.com/search?textToSearch=Hotel+Monterey+Grasmere+Osaka&checkIn=2027-05-05&checkOut=2027-05-08&adults=2&rooms=1&currencyCode=EUR",
+    "hotel": "ART HOTEL Osaka Bay Tower",
+    "note10": 8.0,
+    "nuit": 55.0,
+    "total": 165.0,
+    "lien": "https://www.booking.com/searchresults.html?ss=ART+HOTEL+Osaka+Bay+Tower&checkin=2027-05-05&checkout=2027-05-08&group_adults=2&no_rooms=1&selected_currency=EUR",
     "km": null
    }
   },
@@ -63,8 +63,8 @@
    "moins_cher": {
     "hotel": "Miyako City Kintetsu Kyoto Station",
     "note10": 8.2,
-    "nuit": 60.0,
-    "total": 180.0,
+    "nuit": 59.0,
+    "total": 177.0,
     "lien": "https://www.agoda.com/search?textToSearch=Miyako+City+Kintetsu+Kyoto+Station&checkIn=2027-05-08&checkOut=2027-05-11&adults=2&rooms=1&currencyCode=EUR",
     "km": null
    }
@@ -75,19 +75,19 @@
    "chk_out": "2027-05-15",
    "nuits": 4,
    "recommande": {
-    "hotel": "Hotel Metropolitan Tokyo Ikebukuro",
-    "note10": 8.2,
-    "nuit": 127.0,
-    "total": 508.0,
-    "lien": "https://www.agoda.com/search?textToSearch=Hotel+Metropolitan+Tokyo+Ikebukuro&checkIn=2027-05-11&checkOut=2027-05-15&adults=2&rooms=1&currencyCode=EUR",
+    "hotel": "The Millennials Shibuya",
+    "note10": 9.4,
+    "nuit": 139.0,
+    "total": 556.0,
+    "lien": "https://www.agoda.com/search?textToSearch=The+Millennials+Shibuya&checkIn=2027-05-11&checkOut=2027-05-15&adults=2&rooms=1&currencyCode=EUR",
     "km": null
    },
    "moins_cher": {
-    "hotel": "Hotel Villa Fontaine Grand Haneda Airport",
-    "note10": 8.0,
-    "nuit": 87.0,
-    "total": 348.0,
-    "lien": "https://www.booking.com/searchresults.html?ss=Hotel+Villa+Fontaine+Grand+Haneda+Airport&checkin=2027-05-11&checkout=2027-05-15&group_adults=2&no_rooms=1&selected_currency=EUR",
+    "hotel": "The Millennials Shibuya",
+    "note10": 9.4,
+    "nuit": 139.0,
+    "total": 556.0,
+    "lien": "https://www.agoda.com/search?textToSearch=The+Millennials+Shibuya&checkIn=2027-05-11&checkOut=2027-05-15&adults=2&rooms=1&currencyCode=EUR",
     "km": null
    }
   },
@@ -116,8 +116,8 @@
  ],
  "trajets": 396.99,
  "complet": true,
- "total_recommande": 1517.99,
- "total_moins_cher": 1261.99,
+ "total_recommande": 1545.99,
+ "total_moins_cher": 1418.99,
  "vol": {
   "recherche": "Japon mai 2027",
   "arrivee": "NRT",
@@ -126,5 +126,5 @@
   "jour_retour": "2027-05-16",
   "prix_personne": 831.0
  },
- "total_avec_vols": 2923.99
+ "total_avec_vols": 3080.99
 }
