@@ -1,5 +1,5 @@
 {
- "date": "2026-11-23",
+ "date": "2026-11-24",
  "devise": "EUR",
  "voyageurs": 2,
  "etapes": [
@@ -11,9 +11,9 @@
    "recommande": {
     "hotel": "Richmond Hotel Narita",
     "note10": 8.6,
-    "nuit": 71.0,
-    "total": 71.0,
-    "lien": "https://www.booking.com/searchresults.html?ss=Richmond+Hotel+Narita&checkin=2027-05-04&checkout=2027-05-05&group_adults=2&no_rooms=1&selected_currency=EUR",
+    "nuit": 69.0,
+    "total": 69.0,
+    "lien": "https://www.agoda.com/search?textToSearch=Richmond+Hotel+Narita&checkIn=2027-05-04&checkOut=2027-05-05&adults=2&rooms=1&currencyCode=EUR",
     "km": 6.788147781289532
    },
    "moins_cher": {
@@ -41,9 +41,9 @@
    "moins_cher": {
     "hotel": "Liber Hotel Osaka",
     "note10": 8.4,
-    "nuit": 64.0,
-    "total": 192.0,
-    "lien": "https://www.agoda.com/search?textToSearch=Liber+Hotel+Osaka&checkIn=2027-05-05&checkOut=2027-05-08&adults=2&rooms=1&currencyCode=EUR",
+    "nuit": 66.0,
+    "total": 198.0,
+    "lien": "https://www.booking.com/searchresults.html?ss=Liber+Hotel+Osaka&checkin=2027-05-05&checkout=2027-05-08&group_adults=2&no_rooms=1&selected_currency=EUR",
     "km": null
    }
   },
@@ -55,16 +55,16 @@
    "recommande": {
     "hotel": "Hotel Vischio Kyoto by Granvia",
     "note10": 8.8,
-    "nuit": 74.0,
-    "total": 222.0,
+    "nuit": 90.0,
+    "total": 270.0,
     "lien": "https://www.agoda.com/search?textToSearch=Hotel+Vischio+Kyoto+by+Granvia&checkIn=2027-05-08&checkOut=2027-05-11&adults=2&rooms=1&currencyCode=EUR",
     "km": null
    },
    "moins_cher": {
     "hotel": "Miyako City Kintetsu Kyoto Station",
     "note10": 8.2,
-    "nuit": 59.0,
-    "total": 177.0,
+    "nuit": 62.0,
+    "total": 186.0,
     "lien": "https://www.agoda.com/search?textToSearch=Miyako+City+Kintetsu+Kyoto+Station&checkIn=2027-05-08&checkOut=2027-05-11&adults=2&rooms=1&currencyCode=EUR",
     "km": null
    }
@@ -77,9 +77,9 @@
    "recommande": {
     "hotel": "Hotel Metropolitan Tokyo Ikebukuro",
     "note10": 8.2,
-    "nuit": 127.0,
-    "total": 508.0,
-    "lien": "https://www.agoda.com/search?textToSearch=Hotel+Metropolitan+Tokyo+Ikebukuro&checkIn=2027-05-11&checkOut=2027-05-15&adults=2&rooms=1&currencyCode=EUR",
+    "nuit": 128.0,
+    "total": 512.0,
+    "lien": "https://www.tripadvisor.com/Hotel_Review-g1066460-d304546-Reviews-Hotel_Metropolitan_Tokyo_Ikebukuro-Toshima_Tokyo_Tokyo_Prefecture_Kanto.html",
     "km": null
    },
    "moins_cher": {
@@ -116,8 +116,8 @@
  ],
  "trajets": 396.99,
  "complet": true,
- "total_recommande": 1517.99,
- "total_moins_cher": 1237.99,
+ "total_recommande": 1567.99,
+ "total_moins_cher": 1252.99,
  "vol": {
   "recherche": "Japon mai 2027",
   "arrivee": "NRT",
@@ -126,5 +126,5 @@
   "jour_retour": "2027-05-16",
   "prix_personne": 831.0
  },
- "total_avec_vols": 2899.99
+ "total_avec_vols": 2914.99
 }
