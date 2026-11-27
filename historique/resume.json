@@ -1,5 +1,5 @@
 {
- "date": "2026-11-26",
+ "date": "2026-11-27",
  "devise": "EUR",
  "voyageurs": 2,
  "etapes": [
@@ -11,8 +11,8 @@
    "recommande": {
     "hotel": "Richmond Hotel Narita",
     "note10": 8.6,
-    "nuit": 69.0,
-    "total": 69.0,
+    "nuit": 68.0,
+    "total": 68.0,
     "lien": "https://www.agoda.com/search?textToSearch=Richmond+Hotel+Narita&checkIn=2027-05-04&checkOut=2027-05-05&adults=2&rooms=1&currencyCode=EUR",
     "km": 6.788147781289532
    },
@@ -31,19 +31,19 @@
    "chk_out": "2027-05-08",
    "nuits": 3,
    "recommande": {
-    "hotel": "Hotel Universal Port Vita",
-    "note10": 9.2,
-    "nuit": 78.0,
-    "total": 234.0,
-    "lien": "https://www.booking.com/searchresults.html?ss=Hotel+Universal+Port+Vita&checkin=2027-05-05&checkout=2027-05-08&group_adults=2&no_rooms=1&selected_currency=EUR",
+    "hotel": "Hotel Universal Port",
+    "note10": 9.0,
+    "nuit": 83.0,
+    "total": 249.0,
+    "lien": "https://www.booking.com/searchresults.html?ss=Hotel+Universal+Port&checkin=2027-05-05&checkout=2027-05-08&group_adults=2&no_rooms=1&selected_currency=EUR",
     "km": null
    },
    "moins_cher": {
-    "hotel": "ART HOTEL Osaka Bay Tower",
-    "note10": 8.0,
-    "nuit": 55.0,
-    "total": 165.0,
-    "lien": "https://www.booking.com/searchresults.html?ss=ART+HOTEL+Osaka+Bay+Tower&checkin=2027-05-05&checkout=2027-05-08&group_adults=2&no_rooms=1&selected_currency=EUR",
+    "hotel": "Liber Hotel Osaka",
+    "note10": 8.4,
+    "nuit": 68.0,
+    "total": 204.0,
+    "lien": "https://www.tripadvisor.com/Hotel_Review-g298566-d17653770-Reviews-Liber_Hotel_Osaka-Osaka_Osaka_Prefecture_Kinki.html",
     "km": null
    }
   },
@@ -53,19 +53,19 @@
    "chk_out": "2027-05-11",
    "nuits": 3,
    "recommande": {
-    "hotel": "Hotel Tou Nishinotoin Kyoto",
-    "note10": 9.4,
-    "nuit": 96.0,
-    "total": 288.0,
-    "lien": "https://www.tripadvisor.com/Hotel_Review-g298564-d21291794-Reviews-Hotel_Tou_Nishinotoin_Kyoto-Kyoto_Kyoto_Prefecture_Kinki.html",
+    "hotel": "Park Hotel Kyoto Oike",
+    "note10": 9.6,
+    "nuit": 99.0,
+    "total": 297.0,
+    "lien": "https://www.tripadvisor.com/Hotel_Review-g298564-d23101005-Reviews-Park_Hotel_Kyoto_Oike-Kyoto_Kyoto_Prefecture_Kinki.html",
     "km": null
    },
    "moins_cher": {
-    "hotel": "Miyako City Kintetsu Kyoto Station",
-    "note10": 8.2,
-    "nuit": 64.0,
-    "total": 192.0,
-    "lien": "https://www.tripadvisor.com/Hotel_Review-g298564-d2222819-Reviews-Miyako_City_Kintetsu_Kyoto_Station-Kyoto_Kyoto_Prefecture_Kinki.html",
+    "hotel": "Hotel Elcient Kyoto Hachijoguchi",
+    "note10": 8.0,
+    "nuit": 87.0,
+    "total": 261.0,
+    "lien": "https://www.booking.com/searchresults.html?ss=Hotel+Elcient+Kyoto+Hachijoguchi&checkin=2027-05-08&checkout=2027-05-11&group_adults=2&no_rooms=1&selected_currency=EUR",
     "km": null
    }
   },
@@ -85,9 +85,9 @@
    "moins_cher": {
     "hotel": "Hotel Villa Fontaine Grand Haneda Airport",
     "note10": 8.0,
-    "nuit": 84.0,
-    "total": 336.0,
-    "lien": "https://www.tripadvisor.com/Hotel_Review-g1066454-d20063612-Reviews-Hotel_Villa_Fontaine_Grand_Haneda_Airport-Ota_Tokyo_Tokyo_Prefecture_Kanto.html",
+    "nuit": 87.0,
+    "total": 348.0,
+    "lien": "https://www.booking.com/searchresults.html?ss=Hotel+Villa+Fontaine+Grand+Haneda+Airport&checkin=2027-05-11&checkout=2027-05-15&group_adults=2&no_rooms=1&selected_currency=EUR",
     "km": null
    }
   },
@@ -116,8 +116,8 @@
  ],
  "trajets": 396.99,
  "complet": true,
- "total_recommande": 1494.99,
- "total_moins_cher": 1213.99,
+ "total_recommande": 1517.99,
+ "total_moins_cher": 1333.99,
  "vol": {
   "recherche": "Japon mai 2027",
   "arrivee": "NRT",
@@ -126,5 +126,5 @@
   "jour_retour": "2027-05-16",
   "prix_personne": 831.0
  },
- "total_avec_vols": 2875.99
+ "total_avec_vols": 2995.99
 }
