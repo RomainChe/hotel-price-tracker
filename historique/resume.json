@@ -1,5 +1,5 @@
 {
- "date": "2026-11-27",
+ "date": "2026-11-28",
  "devise": "EUR",
  "voyageurs": 2,
  "etapes": [
@@ -13,7 +13,7 @@
     "note10": 8.6,
     "nuit": 68.0,
     "total": 68.0,
-    "lien": "https://www.agoda.com/search?textToSearch=Richmond+Hotel+Narita&checkIn=2027-05-04&checkOut=2027-05-05&adults=2&rooms=1&currencyCode=EUR",
+    "lien": "https://www.booking.com/searchresults.html?ss=Richmond+Hotel+Narita&checkin=2027-05-04&checkout=2027-05-05&group_adults=2&no_rooms=1&selected_currency=EUR",
     "km": 6.788147781289532
    },
    "moins_cher": {
@@ -53,19 +53,19 @@
    "chk_out": "2027-05-11",
    "nuits": 3,
    "recommande": {
-    "hotel": "Park Hotel Kyoto Oike",
-    "note10": 9.6,
-    "nuit": 99.0,
-    "total": 297.0,
-    "lien": "https://www.tripadvisor.com/Hotel_Review-g298564-d23101005-Reviews-Park_Hotel_Kyoto_Oike-Kyoto_Kyoto_Prefecture_Kinki.html",
+    "hotel": "Hotel Tou Nishinotoin Kyoto",
+    "note10": 9.4,
+    "nuit": 96.0,
+    "total": 288.0,
+    "lien": "https://www.tripadvisor.com/Hotel_Review-g298564-d21291794-Reviews-Hotel_Tou_Nishinotoin_Kyoto-Kyoto_Kyoto_Prefecture_Kinki.html",
     "km": null
    },
    "moins_cher": {
-    "hotel": "Hotel Elcient Kyoto Hachijoguchi",
-    "note10": 8.0,
-    "nuit": 87.0,
-    "total": 261.0,
-    "lien": "https://www.booking.com/searchresults.html?ss=Hotel+Elcient+Kyoto+Hachijoguchi&checkin=2027-05-08&checkout=2027-05-11&group_adults=2&no_rooms=1&selected_currency=EUR",
+    "hotel": "Hotel Vischio Kyoto by Granvia",
+    "note10": 8.8,
+    "nuit": 71.0,
+    "total": 213.0,
+    "lien": "https://www.agoda.com/search?textToSearch=Hotel+Vischio+Kyoto+by+Granvia&checkIn=2027-05-08&checkOut=2027-05-11&adults=2&rooms=1&currencyCode=EUR",
     "km": null
    }
   },
@@ -75,11 +75,11 @@
    "chk_out": "2027-05-15",
    "nuits": 4,
    "recommande": {
-    "hotel": "The Royal Park Hotel Tokyo Haneda",
+    "hotel": "Hotel Metropolitan Tokyo Ikebukuro",
     "note10": 8.2,
-    "nuit": 109.0,
-    "total": 436.0,
-    "lien": "https://www.tripadvisor.com/Hotel_Review-g1066454-d6777496-Reviews-The_Royal_Park_Hotel_Tokyo_Haneda-Ota_Tokyo_Tokyo_Prefecture_Kanto.html",
+    "nuit": 125.0,
+    "total": 500.0,
+    "lien": "https://www.tripadvisor.com/Hotel_Review-g1066460-d304546-Reviews-Hotel_Metropolitan_Tokyo_Ikebukuro-Toshima_Tokyo_Tokyo_Prefecture_Kanto.html",
     "km": null
    },
    "moins_cher": {
@@ -116,8 +116,8 @@
  ],
  "trajets": 396.99,
  "complet": true,
- "total_recommande": 1517.99,
- "total_moins_cher": 1333.99,
+ "total_recommande": 1572.99,
+ "total_moins_cher": 1285.99,
  "vol": {
   "recherche": "Japon mai 2027",
   "arrivee": "NRT",
@@ -126,5 +126,5 @@
   "jour_retour": "2027-05-16",
   "prix_personne": 831.0
  },
- "total_avec_vols": 2995.99
+ "total_avec_vols": 2947.99
 }
